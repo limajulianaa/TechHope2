@@ -2,7 +2,9 @@
         .container{
             flex-direction: column;
         }
-    }    
+
+    }
+
         body{
             margin: 0;
             padding: 0;
@@ -37,10 +39,6 @@
             margin-bottom: 15px;
         }
 
-        img:hover{
-            box-shadow: 1px 2px 10px 5px;
-        }
-
         h2 {
             font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
             font-size: 18px;
@@ -57,6 +55,7 @@
             background-color: dodgerblue;
             color: white;
             transition: 0.3s;
+            margin-right: 20px;
         }
 
         button:hover {
