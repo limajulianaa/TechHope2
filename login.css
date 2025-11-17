@@ -6,7 +6,7 @@
     font-family: "poppins";
     color: #fff
 }
-body{
+body{ 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -17,5 +17,5 @@ body{
     position: relative;
     width: 750px;
     height: 450px;
-    border: 2px solid #
+    border: 2px solid 
 }
