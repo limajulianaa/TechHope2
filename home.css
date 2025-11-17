@@ -1,0 +1,12 @@
+.NAV {
+    color: rgb(28, 78, 218);
+    padding-top: 0%;
+    background-color: rgb(24, 15, 15);
+    width: 120px;
+    height: 150px;
+}
+p{
+    color:chartreuse;
+    width: 150px;;
+    height: 150%;
+}
