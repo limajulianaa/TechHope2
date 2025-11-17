@@ -1,0 +1,73 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body{
+    background-image: url("ChatGPT Image 13 de nov. de 2025, 19_00_36.png");
+     width: 100%;
+     min-height: 100vh;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+
+.container{
+    background-color: #fff;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 14px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.titulo{
+    background: linear-gradient(120deg, #5978bb, #afceff);
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+.form{
+    padding: 20px;
+}
+
+.formulario{
+    margin-bottom: 8px;
+    padding-bottom: 18px;
+    display: relative;
+}
+
+.formulario label{
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.formulario input{
+    display: block;
+    width: 100%;
+    border-radius: 14px;
+    padding: 8px;
+    border: 2px solid rgba(202, 198, 198, 0.479);
+}
+
+input:focus{
+    outline: none;
+}
+
+button{
+    background-color: #5978bb;
+    width: 100%;
+    padding: 6px;
+    color: white;
+    border-radius: 14px;
+    font-size: 15px;
+    border: none;
+    cursor:pointer;
+    transition: 0.03s;
+}
+button:hover{
+     background: linear-gradient(120deg, #5978bb, #afceff);
+}

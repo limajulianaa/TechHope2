@@ -1,4 +1,8 @@
-    
+    @media (max-widht: 600px){
+        .container{
+            flex-direction: column;
+        }
+    }    
         body{
             margin: 0;
             padding: 0;
@@ -26,8 +30,8 @@
         }
 
         img {
-            width: 130px;
-            height: 130px;
+            width: 150px;
+            height: 150px;
             border: inset 3px white;
             border-radius: 20px;
             margin-bottom: 15px;
@@ -58,5 +62,7 @@
         button:hover {
             background-color: #004b99;
         }
+
+
 
 
