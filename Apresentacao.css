@@ -52,6 +52,7 @@
             border: none;
             border-radius: 10px;
             cursor: pointer;
+            background: linear-gradient(dodgerblue, rgb(1, 68, 134));
             background-color: dodgerblue;
             color: white;
             transition: 0.3s;
@@ -59,8 +60,10 @@
         }
 
         button:hover {
-            background-color: #004b99;
+             transform: scale(1.10);
+            background: linear-gradient(rgb(27, 120, 212), rgb(1, 45, 90));
         }
+
 
 
 
