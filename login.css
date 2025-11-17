@@ -44,7 +44,7 @@ body{
     color: white;
 }
 
-.form{
+.formu{
     padding: 20px;
 }
 
@@ -100,3 +100,15 @@ button:hover {
     list-style: none;
     color: #fff;
 }
+
+/*.erro {
+    color: red;
+    font-size: 14px;
+}
+
+#mensagemSucesso {
+    color: green;
+    font-size: 16px;
+    margin-top: 10px;
+    font-weight: bold;
+}/*
