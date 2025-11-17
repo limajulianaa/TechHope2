@@ -4,12 +4,11 @@
     box-sizing: border-box;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-    body{
-    background-image: url(ChatGPT\ Image\ 17\ de\ nov.\ de\ 2025\,\ 10_38_22.png);
-    background-position: center;
-    background-repeat: no-repeat;
+
+body{
     width: 100%;
     min-height: 100vh;
+>>>>>>> 295526c5fdeea1fec4b391b09ba381718683bf10
     display: flex;
     flex-direction: column; /* coloca tudo um abaixo do outro */
     justify-content: center;
@@ -28,6 +27,13 @@
 }*/
 
 .container{
+<<<<<<< HEAD
+    position: relative;
+    width: 750px;
+    height: 450px;
+    border: 2px solid 
+}
+=======
     background-color: #fff;
     border-radius: 10px;
     max-width: 750px;
