@@ -1,21 +1,84 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "poppins";
-    color: #fff
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+<<<<<<< HEAD
 body{ 
+=======
+
+body{
+    width: 100%;
+    min-height: 100vh;
+>>>>>>> 295526c5fdeea1fec4b391b09ba381718683bf10
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    background: #25252b;
 }
+
 .container{
+<<<<<<< HEAD
     position: relative;
     width: 750px;
     height: 450px;
     border: 2px solid 
 }
+=======
+    background-color: #fff;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 14px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.titulo{
+    background: linear-gradient(120deg, #010407, #274680);
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+.form{
+    padding: 20px;
+}
+
+.formulario{
+    margin-bottom: 8px;
+    padding-bottom: 18px;
+    display: relative;
+}
+
+.formulario label{
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.formulario input{
+    display: block;
+    width: 100%;
+    border-radius: 14px;
+    padding: 8px;
+    border: 2px solid rgba(202, 198, 198, 0.479);
+}
+
+input:focus{
+    outline: none;
+}
+
+button{
+    background-color: #5978bb;
+    width: 100%;
+    padding: 6px;
+    color: white;
+    border-radius: 14px;
+    font-size: 15px;
+    border: none;
+    cursor:pointer;
+    transition: 0.03s;
+}
+button:hover{
+    background: linear-gradient(120deg, #142346, #3564af);
+}
+>>>>>>> 295526c5fdeea1fec4b391b09ba381718683bf10
