@@ -27,13 +27,6 @@ body{
 }*/
 
 .container{
-<<<<<<< HEAD
-    position: relative;
-    width: 750px;
-    height: 450px;
-    border: 2px solid 
-}
-=======
     background-color: #fff;
     border-radius: 10px;
     max-width: 750px;
