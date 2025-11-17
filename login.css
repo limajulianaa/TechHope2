@@ -2,11 +2,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 body{
-    background-image: url("ChatGPT Image 13 de nov. de 2025, 19_00_36.png");
      width: 100%;
      min-height: 100vh;
      display: flex;
@@ -24,7 +23,7 @@ body{
 }
 
 .titulo{
-    background: linear-gradient(120deg, #5978bb, #afceff);
+    background: linear-gradient(120deg, #010407, #274680);
     padding: 20px;
     text-align: center;
     color: white;
@@ -69,5 +68,5 @@ button{
     transition: 0.03s;
 }
 button:hover{
-     background: linear-gradient(120deg, #5978bb, #afceff);
+    background: linear-gradient(120deg, #142346, #3564af);
 }
