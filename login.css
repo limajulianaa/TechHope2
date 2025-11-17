@@ -4,28 +4,24 @@
     box-sizing: border-box;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-<<<<<<< HEAD
 body{ 
-=======
+
 
 body{
     width: 100%;
     min-height: 100vh;
->>>>>>> 295526c5fdeea1fec4b391b09ba381718683bf10
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .container{
-<<<<<<< HEAD
     position: relative;
     width: 750px;
     height: 450px;
     border: 2px solid 
 }
-=======
-    background-color: #fff;
+    background-color: #ffffff;
     border-radius: 10px;
     max-width: 600px;
     margin: 14px;
@@ -81,4 +77,3 @@ button{
 button:hover{
     background: linear-gradient(120deg, #142346, #3564af);
 }
->>>>>>> 295526c5fdeea1fec4b391b09ba381718683bf10
