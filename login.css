@@ -4,26 +4,40 @@
     box-sizing: border-box;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+    body{
+    background-image: url(ChatGPT\ Image\ 17\ de\ nov.\ de\ 2025\,\ 10_38_22.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column; /* coloca tudo um abaixo do outro */
+    justify-content: center;
+    align-items: center;
+}
 
-body{
+/*body{
+    background-image: url(ChatGPT\ Image\ 17\ de\ nov.\ de\ 2025\,\ 10_38_22.png);
+    background-position: center;
+    background-repeat: no-repeat;
     width: 100%;
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-}
+}*/
 
 .container{
     background-color: #fff;
     border-radius: 10px;
-    max-width: 600px;
+    max-width: 750px;
     margin: 14px;
     width: 100%;
     overflow: hidden;
 }
 
 .titulo{
-    background: linear-gradient(120deg, #010407, #274680);
+    background: linear-gradient(120deg, #3474b4, #1d499c);
     padding: 20px;
     text-align: center;
     color: white;
@@ -50,14 +64,17 @@ body{
     border-radius: 14px;
     padding: 8px;
     border: 2px solid rgba(202, 198, 198, 0.479);
+    transition: border-color 0.2s ease;
 }
 
 input:focus{
     outline: none;
+    border-color:#1d499c;
+
 }
 
 button{
-    background-color: #5978bb;
+    background: linear-gradient(120deg, #3474b4, #1d499c);
     width: 100%;
     padding: 6px;
     color: white;
@@ -65,8 +82,20 @@ button{
     font-size: 15px;
     border: none;
     cursor:pointer;
-    transition: 0.03s;
+    transition: all 0.3s ease;
 }
-button:hover{
-    background: linear-gradient(120deg, #142346, #3564af);
+
+button:hover {
+        background-color: #2980b9; /* Cor ao passar o mouse */
+        transform: scale(1.02);
+}
+
+.tela{
+    width: 200px;
+}
+
+.tela a{
+    text-decoration: none;
+    list-style: none;
+    color: #fff;
 }
