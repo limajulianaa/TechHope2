@@ -8,7 +8,6 @@
 body{
     width: 100%;
     min-height: 100vh;
->>>>>>> 295526c5fdeea1fec4b391b09ba381718683bf10
     display: flex;
     flex-direction: column; /* coloca tudo um abaixo do outro */
     justify-content: center;
