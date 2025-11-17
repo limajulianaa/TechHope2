@@ -91,11 +91,10 @@ button:hover {
 }
 
 .tela{
-    width: 200px;
+    width: 120px;
 }
 
 .tela a{
     text-decoration: none;
-    list-style: none;
     color: #fff;
 }
