@@ -52,3 +52,13 @@ div{
     flex-direction: row;
 }
 
+footer{
+    
+    color:black;
+    background: rgb(26, 103, 218);
+}
+.imagem {
+    padding-left: 450px;
+}
+
+
