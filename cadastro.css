@@ -8,6 +8,7 @@
 body{
     background-image: url(ChatGPT\ Image\ 17\ de\ nov.\ de\ 2025\,\ 10_38_22.png);
     background-position: center;
+    background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
     min-height: 100vh;
@@ -91,11 +92,10 @@ button:hover {
 }
 
 .tela{
-    width: 200px;
+    width: 120px;
 }
 
 .tela a{
     text-decoration: none;
-    list-style: none;
     color: #fff;
 }
