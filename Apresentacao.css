@@ -53,15 +53,24 @@
             border-radius: 10px;
             cursor: pointer;
             background: linear-gradient(dodgerblue, rgb(1, 68, 134));
+<<<<<<< HEAD
+=======
+            background-color: dodgerblue;
+>>>>>>> da130de89be3abd9b4363fedac5f701532fe8f47
             color: white;
             transition: 0.3s;
             margin-right: 30px;
         }
 
         button:hover {
+<<<<<<< HEAD
             transform: scale(1.10);
+=======
+             transform: scale(1.10);
+>>>>>>> da130de89be3abd9b4363fedac5f701532fe8f47
             background: linear-gradient(rgb(27, 120, 212), rgb(1, 45, 90));
         }
+
 
 
 
