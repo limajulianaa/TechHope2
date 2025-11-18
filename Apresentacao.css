@@ -47,7 +47,7 @@
         }
 
         button {
-            padding: 10px 20px;
+            padding: 10px 10px;
             font-size: 18px;
             border: none;
             border-radius: 10px;
@@ -56,13 +56,14 @@
             background-color: dodgerblue;
             color: white;
             transition: 0.3s;
-            margin-right: 20px;
+            margin: 30px 30px;
         }
 
         button:hover {
              transform: scale(1.10);
             background: linear-gradient(rgb(27, 120, 212), rgb(1, 45, 90));
         }
+
 
 
 
