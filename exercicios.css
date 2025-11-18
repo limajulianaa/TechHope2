@@ -54,6 +54,7 @@
 .icon-circle: hover i{
     color: #fff;
 }
+/* TENTATIVA FALHA DE FAZER UMA JANELA PRO PERFIL
 .profile menu {
     display: none;
     position:absolute;
@@ -76,7 +77,7 @@
 }
 .profile-menu a:hover {
     background-color: #f0f0f0;
-    padding-left: 20px;
+    padding-left: 20px; */
 }
 .capitulo {
     width: 90%;
@@ -103,6 +104,23 @@
     height: 40px;
     background: #5978bb;
     border: none;
-    border-radius: 50px ;
+    border-radius: 50% ;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.nav-btn:hover{
+    transform: scale(1.15);
+    background: #007bff;
+}
+.video-box{
+    width: 100%;
+    height: 350px;
+    border: 2px solid #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
 }
 
