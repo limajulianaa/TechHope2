@@ -1,21 +1,114 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "poppins";
-    color: #fff
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+
 body{
+    background-image: url(ChatGPT\ Image\ 17\ de\ nov.\ de\ 2025\,\ 10_38_22.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column; /* coloca tudo um abaixo do outro */
+    justify-content: center;
+    align-items: center;
+}
+
+/*body{
+    background-image: url(ChatGPT\ Image\ 17\ de\ nov.\ de\ 2025\,\ 10_38_22.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    background: #25252b;
-}
+}*/
+
 .container{
-    position: relative;
-    width: 750px;
-    height: 450px;
-    border: 2px solid #
+    background-color: #fff;
+    border-radius: 10px;
+    max-width: 750px;
+    margin: 14px;
+    width: 100%;
+    overflow: hidden;
 }
+
+.titulo{
+    background: linear-gradient(120deg, #3474b4, #1d499c);
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+.formu{
+    padding: 20px;
+}
+
+.formulario{
+    margin-bottom: 8px;
+    padding-bottom: 18px;
+    display: relative;
+}
+
+.formulario label{
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.formulario input{
+    display: block;
+    width: 100%;
+    border-radius: 14px;
+    padding: 8px;
+    border: 2px solid rgba(202, 198, 198, 0.479);
+    transition: border-color 0.2s ease;
+}
+
+input:focus{
+    outline: none;
+    border-color:#1d499c;
+
+}
+
+button{
+    background: linear-gradient(120deg, #3474b4, #1d499c);
+    width: 100%;
+    padding: 6px;
+    color: white;
+    border-radius: 14px;
+    font-size: 15px;
+    border: none;
+    cursor:pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+        background-color: #2980b9; /* Cor ao passar o mouse */
+        transform: scale(1.02);
+}
+
+.tela{
+    width: 200px;
+}
+
+.tela a{
+    text-decoration: none;
+    list-style: none;
+    color: #fff;
+}
+
+/*.erro {
+    color: red;
+    font-size: 14px;
+}
+
+#mensagemSucesso {
+    color: green;
+    font-size: 16px;
+    margin-top: 10px;
+    font-weight: bold;
+}/*
