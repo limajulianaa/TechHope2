@@ -8,7 +8,7 @@
     align-items: center;
     padding: 15px 30px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-    background-color: #fff;
+    background-color: #e6faf5;
     font-family: Arial, Helvetica, sans-serif;
 }
 .logo img {
@@ -18,13 +18,13 @@
 .nav-bar a {
     font-weight: bold;
     font-size 18px;
-    color: #414141;
+    color: #2c3e50;
     text-decoration: none;
     text-transform: uppercase;
     text-align: center;
 }
 .nav-bar a:hover {
-    color: #007bff;
+    color: #3a7c94;
     transform: scale(1.7); 
 }
 .icons {
