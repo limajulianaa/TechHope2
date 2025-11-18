@@ -30,10 +30,9 @@ body{
 }*/
 
 .container{
-<<<<<<< Updated upstream
     background-color: #fff;
     border-radius: 10px;
-    max-width: 750px;
+    max-width: 600px;
     margin: 14px;
     width: 100%;
     overflow: hidden;
@@ -56,6 +55,8 @@ body{
     display: relative;
 }
 
+
+
 .formulario label{
     display: inline-block;
     margin-bottom: 10px;
@@ -73,8 +74,8 @@ body{
 input:focus{
     outline: none;
     border-color:#1d499c;
-
 }
+
 
 button{
     background: linear-gradient(120deg, #3474b4, #1d499c);
@@ -135,4 +136,4 @@ button:hover {
     height: 450px;
     border: 2px solid;
 }
->>>>>>> Stashed changes
+
