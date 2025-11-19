@@ -81,10 +81,7 @@ body {
 .icon-circle:hover i {
     color:  #000080;
 }
-.carousel-item img{
-    height: 500px; 
-    object-fit: cover; 
-}
+
 
 
 @media (max-width: 500px) {
