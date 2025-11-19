@@ -1,72 +1,81 @@
-*{
+@media (max-width: 600px) {
+    .container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
-    header{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        background-color: rgb(255, 255, 255);
-        border-bottom: inset 5px rgb(1, 67, 134);
-        padding: 5px;
-        width: 100%;
-    }
 
-    .titulo{
-        flex-grow: 1;
-        margin: 0 20px;
-    }
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(255, 255, 255);
+    border-bottom: inset 5px rgb(1, 67, 134);
+    padding: 5px;
+    width: 100%;
+}
 
-    .titulo h2{
-        margin-bottom: 50px;
-        margin: 0;
-        font-size: 1em;
-    }
+.titulo {
+    flex-grow: 1;
+    margin: 0 20px;
+}
 
-    .botoes{
-        display: flex;
-        gap:30px
-    }
+.titulo h2 {
+    margin-bottom: 50px;
+    margin: 0;
+    font-size: 1em;
+}
 
-    img{
-        flex-shrink: 0;
-    }
+.botoes {
+    display: flex;
+    gap: 30px
+}
 
-    body{
-            padding: 0;
-            margin: 0;
-            background-image: url("ChatGPT Image 13 de nov. de 2025, 19_00_36.png");
-            background-size: cover;      
-            background-position: center; 
-            background-repeat: no-repeat;
-            min-height: 100vh;                 
-            color: white;
-        }
-        
-        h1{
-            border: inset 4px rgb(1, 67, 134);
-            text-align: center;
-            color: white;
-             background-color: rgba(1, 67, 134, 0.377);
-        }
-    
-        
-        button {
-            height: 50px;
-            width: 70px;
-            padding: 2px;
-            font-size: 13px;
-            border: none;
-            border-radius: 20px;
-            cursor: pointer;
-            background: linear-gradient(dodgerblue, rgb(1, 68, 134));
-            background-color: dodgerblue;
-            color: white;
-            transition: 0.3s;
-            margin-left: 20px;
-            
-            
+img {
+    flex-shrink: 0;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-image: url("ChatGPT Image 13 de nov. de 2025, 19_00_36.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    color: white;
+}
+
+h1 {
+    border: inset 4px rgb(1, 67, 134);
+    text-align: center;
+    color: white;
+    background-color: rgba(1, 67, 134, 0.377);
+}
+
+
+button {
+    height: 50px;
+    width: 70px;
+    padding: 2px;
+    font-size: 13px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    background: linear-gradient(dodgerblue, rgb(1, 68, 134));
+    background-color: dodgerblue;
+    color: white;
+    transition: 0.3s;
+    margin-left: 20px;
+
+
 }
 
 
@@ -74,7 +83,3 @@ button:hover {
     transform: scale(1.10);
     background: linear-gradient(rgb(27, 120, 212), rgb(1, 45, 90));
 }
-
-        
-
-
