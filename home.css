@@ -5,9 +5,17 @@
 }
 
 body {
-    background-color:#FFFAFA; 
+    background-color:#ffffff; 
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.6;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
 }
 
 .header {
@@ -22,6 +30,9 @@ body {
 .logo img {
     height: 30px;
     width: auto;
+}
+.carousel{
+    margin-top: 90px;
 }
 
 .nav-bar a {
@@ -70,3 +81,38 @@ body {
 .icon-circle:hover i {
     color:  #000080;
 }
+
+
+
+@media (max-width: 500px) {
+    .header {
+        padding: 12px;
+    }
+
+    .logo img {
+        height: 22px;
+    }
+
+    .nav-bar a {
+        font-size: 14px;
+    }
+
+    .icons {
+        gap: 8px;
+    }
+
+    .icon-circle {
+        width: 30px;
+        height: 30px;
+    }
+
+    .icon-circle i {
+        font-size: 16px;
+    }
+
+    /* Empurra um pouco mais o carrossel por causa do menu mais alto no celular */
+    .carousel {
+        margin-top: 90px;
+    }
+}
+
