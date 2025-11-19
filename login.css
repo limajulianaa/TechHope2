@@ -4,12 +4,7 @@
     box-sizing: border-box;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-<<<<<<< HEAD
-body{ 
-
-=======
->>>>>>> 272929acdebaef6d08bf4c742bdc0be5a76e48a7
-
+ 
 body{
     background-image: url(ChatGPT\ Image\ 17\ de\ nov.\ de\ 2025\,\ 10_38_22.png);
     background-position: center;
@@ -34,17 +29,15 @@ body{
     align-items: center;
 }*/
 
-.container{
-<<<<<<< HEAD
+.container{ 
     position: relative;
     width: 750px;
     height: 450px;
     border: 2px solid 
 }
-    background-color: #ffffff;
-=======
-    background-color: #fff;
->>>>>>> 272929acdebaef6d08bf4c742bdc0be5a76e48a7
+
+body{ 
+background-color: #ffffff;
     border-radius: 10px;
     max-width: 600px;
     margin: 14px;
