@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Capítulos</title>
     <link rel="stylesheet" href="exercicios.css"> 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 </head>
 
@@ -15,7 +16,7 @@
     </div>
 
     <nav class="nav-bar">
-        <a href="homepage.html">Cursos</a>
+        <a href="homepage.html">página principal</a>
     </nav>
     <div class="icons">
         <div class="icon-circle">
@@ -34,7 +35,7 @@
     </div>
 </header>
 
-<body>
+<body >
     <section class="capitulo">
         <div class="capitulo-topo"> 
             <h2>Capítulo-01: Tema do Capítulo</h2>
@@ -46,28 +47,96 @@
     </section>
 
     <section class="video-container">
-        <video class="video-player" autoplay muted>
+        <video class="video-player" controls>
             <source src="video.mp4.mp4" type="video/mp4">
             <source src="video.ogg" type="video/ogg">
             Seu navegador não suporta esse formato de video.
         </video>
     </section>
-
-    <section class="section-two">
-        <div class="materiais">
-            <h3>Materiais do Vídeo:</h3>
-            <a href="#" class="pdf-link"></a>
+  <section class="section-two"> 
+    <div class="materiais">
+        <div>
+        <h3>Materiais:</h3> 
+        </div>   
+        <iframe src="https://www.slideshare.net/slideshow/embed_code/key/KoNZz9j4hxAm8w" 
+                width="427" height="356" 
+                frameborder="0" 
+                marginwidth="0" marginheight="0" 
+                scrolling="no" 
+            
+                allowfullscreen>
+        </iframe>
+        <div>
+            <strong>
+                <a href="https://pt.slideshare.net/slideshow/apresentao-html-e-css/47378139" 
+                   title="apresentao-html-e-css" target="_blank"> 
+                </a>
+            </strong> 
         </div>
-    </section>
-    
-    <section class="section-three">
-        <div class="exercicios">
-            <h3>Exercícios:</h3>
-            <div class="questao">
-                <p><strong>Questão 1:</strong></p>
+    </div>
+</section>
+<section class="section-three">
+    <div class="exercicios">
+        <h3>Exercícios:</h3>
+
+        <div class="questao">
+            <p><strong>Questão 1:</strong> ?</p>
+            <div class="alternativas">
+                <label><input type="radio" name="questao1" value="a"> fdsgaf </label><br>
+                <label><input type="radio" name="questao1" value="b"> fdhzddfz</label><br>
+                <label><input type="radio" name="questao1" value="c"> fdhssdf</label><br>
+                <label><input type="radio" name="questao1" value="d"> gfxhf</label><br>
+                <label><input type="radio" name="questao1" value="e"> hfjf</label><br>
             </div>
         </div>
-    </section>
+
+        <div class="questao">
+            <p><strong>Questão 2:</strong> ?</p>
+            <div class="alternativas">
+                <label><input type="radio" name="questao2" value="a"> gjfdjfs</label><br>
+                <label><input type="radio" name="questao2" value="b"> fhjghdjd</label><br>
+                <label><input type="radio" name="questao2" value="c"> hfjfhdjfdhj</label><br>
+                <label><input type="radio" name="questao2" value="d"> hgjdjgfj</label><br>
+                <label><input type="radio" name="questao2" value="e"> ghsdfhgsd</label><br>
+            </div>
+        </div>
+
+        <div class="questao">
+            <p><strong>Questão 3:</strong> ?</p>
+            <div class="alternativas">
+                <label><input type="radio" name="questao3" value="a">gjfdg</label><br>
+                <label><input type="radio" name="questao3" value="b"> ghfsgh</label><br>
+                <label><input type="radio" name="questao3" value="c"> hjgd</label><br>
+                <label><input type="radio" name="questao3" value="d"> gjfdj</label><br>
+                <label><input type="radio" name="questao3" value="e"> N2</label><br>
+            </div>
+        </div>
+
+        <div class="questao">
+            <p><strong>Questão 4:</strong> ?</p>
+            <div class="alternativas">
+                <label><input type="radio" name="questao4" value="a"> Gfghjgfh</label><br>
+                <label><input type="radio" name="questao4" value="b"> hjhgfj</label><br>
+                <label><input type="radio" name="questao4" value="c">hjgfjgfj</label><br>
+                <label><input type="radio" name="questao4" value="d"> hjfhdjfgj</label><br>
+                <label><input type="radio" name="questao4" value="e"> Tghfhjgfj</label><br>
+            </div>
+        </div>
+
+        <div class="questao">
+            <p><strong>Questão 5:</strong> ?</p>
+            <div class="alternativas">
+                <label><input type="radio" name="questao5" value="a"> vhfdhfdh</label><br>
+                <label><input type="radio" name="questao5" value="b"> gfhngfhjgf</label><br>
+                <label><input type="radio" name="questao5" value="c"> htdjghj</label><br>
+                <label><input type="radio" name="questao5" value="d">gfjhgfjgfj</label><br>
+                <label><input type="radio" name="questao5" value="e"> Ogfsghgha</label><br>
+            </div>
+        </div>
+
+        <button class="submit-btn">Enviar Respostas</button>
+    </div>
+</section>
 
     <script src="exercicios.js"></script>
 </body>
