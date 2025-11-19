@@ -46,7 +46,7 @@ body{
     background-color: #fff;
 >>>>>>> 272929acdebaef6d08bf4c742bdc0be5a76e48a7
     border-radius: 10px;
-    max-width: 750px;
+    max-width: 600px;
     margin: 14px;
     width: 100%;
     overflow: hidden;
@@ -69,6 +69,8 @@ body{
     display: relative;
 }
 
+
+
 .formulario label{
     display: inline-block;
     margin-bottom: 10px;
@@ -86,8 +88,8 @@ body{
 input:focus{
     outline: none;
     border-color:#1d499c;
-
 }
+
 
 button{
     background: linear-gradient(120deg, #3474b4, #1d499c);
@@ -116,7 +118,22 @@ button:hover {
     color: #fff;
 }
 
-/*.erro {
+@keyframes aparecerSuave {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.container {
+    animation: aparecerSuave 0.8s ease-out;
+}
+
+.erro {
     color: red;
     font-size: 14px;
 }
@@ -126,4 +143,4 @@ button:hover {
     font-size: 16px;
     margin-top: 10px;
     font-weight: bold;
-}/*
+}

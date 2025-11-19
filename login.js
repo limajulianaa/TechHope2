@@ -1,4 +1,4 @@
-const form = document.getElementById("form");
+/*const  = document.getElementById("form");
 
 form.addEventListener("submit", function(event) {
     event.preventDefault();
@@ -13,9 +13,9 @@ form.addEventListener("submit", function(event) {
     }
 
     form.reset();
-});
+});*/
 
-/*const form = document.getElementById("form");
+const form = document.getElementById("form");
 
 form.addEventListener("submit", function(event) {
     event.preventDefault();
@@ -60,4 +60,4 @@ form.addEventListener("submit", function(event) {
         mensagemSucesso.textContent = "Formulário enviado com sucesso!";
         form.reset();
     }
-});*/
+});
