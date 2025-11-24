@@ -3,8 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width-device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Cadastro</title> <!-- Added a more descriptive title -->
     <link rel="stylesheet" href="cadastro.css">
+    <style>
+        /* Add this to your cadastro.css or a global CSS file */
+        .erro {
+            color: #dc3545; /* Red color for error messages */
+            font-size: 0.9em;
+            margin-top: 5px;
+            display: block; /* Ensures it takes its own line */
+        }
+        .hidden {
+            display: none; /* Class to hide elements, used by JavaScript */
+        }
+    </style>
 </head>
 <body>
     <div class="container">
@@ -12,25 +24,39 @@
             <h2>CADASTRO</h2>
         </section>
 
-        <form id="form" class="form">
-        <div class=formulario>
-            <label for="name">Nome:</label>
-            <input type="text" id="nome" placeholder="Digite o seu nome completo:">
-        </div>
+        <form id="form" class="form"> <!-- Your form ID is 'form' -->
+            <div class="formulario">
+                <label for="nome">Nome:</label> <!-- Your input ID is 'nome' -->
+                <input type="text" id="nome" placeholder="Digite o seu nome completo:" required> <!-- Added 'required' for basic HTML validation -->
+            </div>
 
-        <div class=formulario>
-            <label for="email">E-mail:</label>
-            <input type="email" id="email" placeholder="Digite o seu E-mail:">
-        </div>
+            <div class="formulario">
+                <label for="email">E-mail:</label> <!-- Your input ID is 'email' -->
+                <input type="email" id="email" placeholder="Digite o seu E-mail:" required> <!-- Added 'required' -->
+            </div>
 
-        <div class=formulario>
-            <label for="senha">Senha:</label>
-            <input type="password" id="senha" placeholder="Digite a sua senha:">
-        </div>
+            <div class="formulario">
+                <label for="senha">Senha:</label> <!-- Your input ID is 'senha' -->
+                <input type="password" id="senha" placeholder="Digite a sua senha:" required minlength="6"> <!-- Added 'required' and 'minlength' -->
+            </div>
 
-        <button type="submit">Enviar</button>
-    </form>
+            <button type="submit" class="mandar">Enviar</button> <!-- Your button has no specific ID, index.ts targets the form submit -->
+
+            <!-- IMPORTANT: This is the paragraph where authentication errors will be displayed -->
+            <p id="cadastroErrorMessage" class="erro hidden"></p>
+
+            <!-- Optional: If you want a Google Sign-In button on the sign-up page -->
+            <!-- <hr style="margin: 20px 0;">
+            <button type="button" id="googleSignInBtn" class="mandar">Entrar com Google</button> -->
+        </form>
     </div>
-     <button type="submit" class="tela"><a href="Apresentacao.html">Voltar</a></button>
+    
+    <!-- Changed type="submit" to type="button" for the back button -->
+    <!-- The JavaScript in index.ts won't interfere with this button now -->
+    <button type="button" class="tela"><a href="Apresentacao.html">Voltar</a></button>
+
+    <!-- IMPORTANT: This links your HTML to the compiled JavaScript logic from index.ts -->
+    <!-- Ensure your build process outputs index.js to a place accessible from here -->
+    <script type="module" src="./index.js"></script>
 </body>
 </html>
