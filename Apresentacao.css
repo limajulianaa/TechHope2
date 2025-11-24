@@ -64,7 +64,7 @@ header img {
     border: inset 4px rgb(1, 67, 134);
     text-align: center;
     color: white;
-    background-color: rgb(1, 67, 134);
+    background-color: #000080;
     padding: 15px;
     width: 90%;
     margin: 20px auto;
@@ -90,7 +90,7 @@ button {
     border: none;
     border-radius: 10px;
     cursor: pointer;
-    background: linear-gradient(135deg, dodgerblue, rgb(1, 68, 134));
+    background-color: #000080;
     color: white;
     transition: 0.3s;
     display: flex;
@@ -107,19 +107,21 @@ button img {
 
 button:hover {
     transform: scale(1.08);
-    background: linear-gradient(135deg, rgb(27, 120, 212), rgb(1, 45, 90));
-    box-shadow: 0 0 8px rgba(0, 140, 255, 0.7);
+    background-color: #000080;
+    box-shadow: 0 0 8px #FFB90F;
 }
 
 div {
     display: flex;
     flex-direction: row;
 }
+/* #FFB90F; amarelo*/
+/*#000080; azul */
 
 .d1 {
     border: inset 5px rgb(1, 67, 134);
     text-align: center;
-    background-color: rgb(1, 67, 134);
+    background-color:#000080;
     padding: 3px;
     margin: 3px;
     border-radius: 12px;
@@ -150,7 +152,7 @@ strong {
 .d2 {
     border: inset 5px rgb(1, 67, 134);
     text-align: center;
-    background-color: rgb(1, 67, 134);
+    background-color: #000080;
     padding: 3px;
     margin: 3px;
     border-radius: 12px;
