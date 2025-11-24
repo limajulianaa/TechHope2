@@ -1,117 +1,229 @@
 // src/index.ts
 
-// 1. Import necessary functions from your authentication.ts and firebase.ts files
-// This brings in the functions we created to handle sign-up, sign-in, and sign-out,
-// as well as the 'auth' instance and the 'onAuthStateChanged' listener from Firebase.
+// --- Imports from your Firebase and Authentication modules ---
+// These bring in the functions we need to perform authentication actions.
 import {
   signInWithGoogle,
   signUpWithEmailAndPassword,
   signInWithEmail,
   signOutUser
-} from './authentication'; // Functions from your authentication.ts
-import { auth } from './firebase'; // The Firebase Auth instance from your firebase.ts
-import { onAuthStateChanged, User } from 'firebase/auth'; // The auth state listener and User type directly from Firebase SDK
+} from './authentication';
 
-// 2. Get references to HTML elements
-// We use 'document.getElementById' to grab each element by its ID.
-// The '!' tells TypeScript that we are sure these elements exist in the HTML.
-const authStatus = document.getElementById('authStatus')!;
-const authForms = document.getElementById('authForms')!;
-const userInfo = document.getElementById('userInfo')!;
+// We import the 'auth' instance directly from firebase.ts because onAuthStateChanged needs it.
+import { auth } from './firebase';
 
-const signUpForm = document.getElementById('signUpForm') as HTMLFormElement;
-const signUpEmailInput = document.getElementById('signUpEmail') as HTMLInputElement;
-const signUpPasswordInput = document.getElementById('signUpPassword') as HTMLInputElement;
+// We import the onAuthStateChanged listener and the User type directly from the Firebase Auth SDK.
+// updateProfile is needed to set the user's display name after sign-up.
+import { onAuthStateChanged, User, updateProfile } from 'firebase/auth';
 
-const signInForm = document.getElementById('signInForm') as HTMLFormElement;
-const signInEmailInput = document.getElementById('signInEmail') as HTMLInputElement;
-const signInPasswordInput = document.getElementById('signInPassword') as HTMLInputElement;
+// --- Define your page paths ---
+// IMPORTANT: Adjust these paths to precisely match your actual HTML file names and locations.
+// For example, if your login page is "pages/login.html", update LOGIN_PAGE_PATH accordingly.
+const LOGIN_PAGE_PATH = '/login.html';
+const CADASTRO_PAGE_PATH = '/cadastro.html'; // Your Sign Up page
+const DASHBOARD_PAGE_PATH = '/homepage.html'; // Your main content page after login
 
-const googleSignInBtn = document.getElementById('googleSignInBtn')!;
-const signOutBtn = document.getElementById('signOutBtn')!;
-
-const userUidSpan = document.getElementById('userUid')!;
-const userEmailSpan = document.getElementById('userEmail')!;
-const userDisplayNameSpan = document.getElementById('userDisplayName')!;
-
-// 3. Set up the onAuthStateChanged listener
-// This is the most crucial part for managing UI state based on authentication.
-// It fires whenever the user's sign-in state changes.
-onAuthStateChanged(auth, (user: User | null) => {
-  if (user) {
-    // User is signed in
-    console.log("User is signed in:", user.uid);
-    authStatus.textContent = `You are logged in as: ${user.email}`;
-    authForms.classList.add('hidden'); // Hide authentication forms
-    userInfo.classList.remove('hidden'); // Show user info
-
-    // Display user details
-    userUidSpan.textContent = user.uid;
-    userEmailSpan.textContent = user.email || 'N/A';
-    userDisplayNameSpan.textContent = user.displayName || 'N/A';
+// --- Helper functions for displaying error messages ---
+// These functions help centralize how errors are shown to the user on the page.
+function displayError(elementId: string, message: string) {
+  const errorElement = document.getElementById(elementId);
+  if (errorElement) {
+    errorElement.textContent = message;
+    errorElement.classList.remove('hidden'); // Make the error message visible
   } else {
-    // User is signed out
-    console.log("No user is signed in.");
-    authStatus.textContent = "You are currently logged out.";
-    authForms.classList.remove('hidden'); // Show authentication forms
-    userInfo.classList.add('hidden'); // Hide user info
+    console.error(`Error element with ID '${elementId}' not found on the page.`);
   }
+}
+
+function clearError(elementId: string) {
+  const errorElement = document.getElementById(elementId);
+  if (errorElement) {
+    errorElement.textContent = '';
+    errorElement.classList.add('hidden'); // Hide the error message
+  }
+}
+
+// --- Main logic that runs when the HTML document is fully loaded ---
+// This ensures that all HTML elements exist before we try to interact with them.
+document.addEventListener('DOMContentLoaded', () => {
+  // Get the current page's path. We convert it to lowercase for case-insensitive comparison.
+  const currentPagePath = window.location.pathname.toLowerCase();
+
+  // --- Logic specific to the Login Page (login.html) ---
+  if (currentPagePath.includes(LOGIN_PAGE_PATH.toLowerCase())) {
+    console.log("Initializing login page logic.");
+
+    // Get references to elements on the login page, matching your login.html IDs.
+    const signInForm = document.getElementById('form') as HTMLFormElement | null;
+    const signInEmailInput = document.getElementById('email') as HTMLInputElement | null;
+    const signInPasswordInput = document.getElementById('senha') as HTMLInputElement | null;
+    const loginErrorMessage = document.getElementById('loginErrorMessage') as HTMLParagraphElement | null; // This element should be added to login.html
+    const googleSignInBtn = document.getElementById('googleSignInBtn') as HTMLButtonElement | null; // This element should be added to login.html
+
+    // If the sign-in form and its inputs are found, attach the submit event listener.
+    if (signInForm && signInEmailInput && signInPasswordInput) {
+      signInForm.addEventListener('submit', async (event) => {
+        event.preventDefault(); // Prevent the browser's default form submission (which reloads the page).
+        if (loginErrorMessage) clearError('loginErrorMessage'); // Clear any previous errors.
+
+        const email = signInEmailInput.value;
+        const password = signInPasswordInput.value;
+
+        try {
+          // Call the signInWithEmail function from authentication.ts
+          await signInWithEmail(email, password);
+          // If successful, the onAuthStateChanged listener (defined globally below) will handle redirection.
+          signInForm.reset(); // Clear the form fields.
+        } catch (error: any) {
+          // If an error occurs, display it to the user.
+          const firebaseErrorMsg = error.message || "Erro desconhecido ao fazer login.";
+          if (loginErrorMessage) displayError('loginErrorMessage', firebaseErrorMsg);
+          else alert(`Erro: ${firebaseErrorMsg}`); // Fallback alert if no specific element.
+          console.error("Email sign-in error:", error);
+        }
+      });
+    }
+
+    // If the Google Sign-In button is found, attach its click event listener.
+    if (googleSignInBtn) {
+      googleSignInBtn.addEventListener('click', async () => {
+        if (loginErrorMessage) clearError('loginErrorMessage'); // Clear previous errors.
+        try {
+          // Call the signInWithGoogle function from authentication.ts
+          await signInWithGoogle();
+          // onAuthStateChanged will handle redirection.
+        } catch (error: any) {
+          const firebaseErrorMsg = error.message || "Erro desconhecido ao fazer login com Google.";
+          if (loginErrorMessage) displayError('loginErrorMessage', firebaseErrorMsg);
+          else alert(`Erro: ${firebaseErrorMsg}`); // Fallback alert.
+          console.error("Google sign-in error:", error);
+        }
+      });
+    }
+  }
+
+  // --- Logic specific to the Cadastro (Sign Up) Page (cadastro.html) ---
+  else if (currentPagePath.includes(CADASTRO_PAGE_PATH.toLowerCase())) {
+    console.log("Initializing cadastro page logic.");
+
+    // Get references to elements on the cadastro page, matching your cadastro.html IDs.
+    const signUpForm = document.getElementById('form') as HTMLFormElement | null;
+    const signUpNameInput = document.getElementById('nome') as HTMLInputElement | null;
+    const signUpEmailInput = document.getElementById('email') as HTMLInputElement | null;
+    const signUpPasswordInput = document.getElementById('senha') as HTMLInputElement | null;
+    const cadastroErrorMessage = document.getElementById('cadastroErrorMessage') as HTMLParagraphElement | null; // This element should be added to cadastro.html
+
+    // If the sign-up form and its inputs are found, attach the submit event listener.
+    if (signUpForm && signUpNameInput && signUpEmailInput && signUpPasswordInput) {
+      signUpForm.addEventListener('submit', async (event) => {
+        event.preventDefault(); // Prevent default form submission.
+        if (cadastroErrorMessage) clearError('cadastroErrorMessage'); // Clear previous errors.
+
+        const name = signUpNameInput.value;
+        const email = signUpEmailInput.value;
+        const password = signUpPasswordInput.value;
+
+        try {
+          // Call the signUpWithEmailAndPassword function from authentication.ts.
+          // This creates the user in Firebase Auth and signs them in immediately.
+          const user = await signUpWithEmailAndPassword(email, password);
+
+          // OPTIONAL: Update the user's display name after successful account creation.
+          // Firebase's createUserWithEmailAndPassword doesn't set a display name directly.
+          if (user && name) {
+            await updateProfile(user, {
+              displayName: name,
+            });
+            console.log("User display name updated:", name);
+          }
+
+          // onAuthStateChanged will handle redirection.
+          signUpForm.reset(); // Clear the form fields.
+        } catch (error: any) {
+          // If an error occurs, display it.
+          const firebaseErrorMsg = error.message || "Erro desconhecido ao cadastrar.";
+          if (cadastroErrorMessage) displayError('cadastroErrorMessage', firebaseErrorMsg);
+          else alert(`Erro: ${firebaseErrorMsg}`); // Fallback alert.
+          console.error("Email sign-up error:", error);
+        }
+      });
+    }
+  }
+
+  // --- Logic specific to the Dashboard Page (dashboard.html) ---
+  else if (currentPagePath.includes(DASHBOARD_PAGE_PATH.toLowerCase())) {
+    console.log("Initializing dashboard page logic.");
+
+    // Get references to elements on the dashboard page.
+    const userEmailDisplay = document.getElementById('userEmailDisplay');
+    const userDisplayNameDisplay = document.getElementById('userDisplayNameDisplay');
+    const userUidDisplay = document.getElementById('userUidDisplay');
+    const signOutBtn = document.getElementById('signOutBtn') as HTMLButtonElement | null;
+    const dashboardErrorMessage = document.getElementById('dashboardErrorMessage') as HTMLParagraphElement | null; // Add this if you want specific errors on dashboard
+
+    // This section directly populates user info if they are already logged in
+    // when arriving at the dashboard, or when the auth state changes on this page.
+    // We re-use onAuthStateChanged here to ensure displays are fresh.
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+        if (userEmailDisplay) userEmailDisplay.textContent = user.email || 'N/A';
+        if (userDisplayNameDisplay) userDisplayNameDisplay.textContent = user.displayName || 'N/A';
+        if (userUidDisplay) userUidDisplay.textContent = user.uid;
+      } else {
+        // If somehow the user is on dashboard but not logged in, redirect them.
+        // This is a safety measure; the global listener below should catch this too.
+        if (currentPagePath === DASHBOARD_PAGE_PATH) {
+             window.location.href = LOGIN_PAGE_PATH;
+        }
+      }
+    });
+
+    // If the Sign Out button is found, attach its click event listener.
+    if (signOutBtn) {
+      signOutBtn.addEventListener('click', async () => {
+        if (dashboardErrorMessage) clearError('dashboardErrorMessage'); // Clear previous errors.
+        try {
+          // Call the signOutUser function from authentication.ts
+          await signOutUser();
+          // onAuthStateChanged will handle redirection.
+        } catch (error: any) {
+          const firebaseErrorMsg = error.message || "Erro desconhecido ao sair.";
+          if (dashboardErrorMessage) displayError('dashboardErrorMessage', firebaseErrorMsg);
+          else alert(`Erro: ${firebaseErrorMsg}`); // Fallback alert.
+          console.error("Sign-out error:", error);
+        }
+      });
+    }
+  }
+  // Add more 'else if' blocks here for other pages in your app if they need specific JS logic.
 });
 
-// 4. Add Event Listeners for Forms and Buttons
 
-// Handle Google Sign-In button click
-googleSignInBtn.addEventListener('click', async () => {
-  try {
-    await signInWithGoogle();
-    // onAuthStateChanged will handle UI updates
-  } catch (error: any) {
-    alert(`Google Sign-In Failed: ${error.message}`);
-    console.error("Google sign-in error:", error);
-  }
-});
+// --- Global onAuthStateChanged Listener for Navigation ---
+// This is a critical listener that runs *every time* the authentication state changes
+// (e.g., user logs in, logs out, session expires) AND on every page load.
+// Its primary job is to ensure users are always on the correct page based on their login status.
+onAuthStateChanged(auth, (user: User | null) => {
+  const currentPagePath = window.location.pathname.toLowerCase(); // Current page URL path.
+  const isLoggedIn = !!user; // `true` if a user object exists (logged in), `false` if `null` (logged out).
 
-// Handle Email/Password Sign Up form submission
-signUpForm.addEventListener('submit', async (event) => {
-  event.preventDefault(); // Prevent default form submission (page reload)
+  console.log("Auth State Changed. User:", user ? user.uid : "None", "IsLoggedIn:", isLoggedIn, "Current Page:", currentPagePath);
 
-  const email = signUpEmailInput.value;
-  const password = signUpPasswordInput.value;
-
-  try {
-    await signUpWithEmailAndPassword(email, password);
-    // onAuthStateChanged will handle UI updates
-    signUpForm.reset(); // Clear form on success
-  } catch (error: any) {
-    alert(`Sign Up Failed: ${error.message}`);
-    console.error("Email sign-up error:", error);
-  }
-});
-
-// Handle Email/Password Sign In form submission
-signInForm.addEventListener('submit', async (event) => {
-  event.preventDefault(); // Prevent default form submission (page reload)
-
-  const email = signInEmailInput.value;
-  const password = signInPasswordInput.value;
-
-  try {
-    await signInWithEmail(email, password);
-    // onAuthStateChanged will handle UI updates
-    signInForm.reset(); // Clear form on success
-  } catch (error: any) {
-    alert(`Sign In Failed: ${error.message}`);
-    console.error("Email sign-in error:", error);
-  }
-});
-
-// Handle Sign Out button click
-signOutBtn.addEventListener('click', async () => {
-  try {
-    await signOutUser();
-    // onAuthStateChanged will handle UI updates
-  } catch (error: any) {
-    alert(`Sign Out Failed: ${error.message}`);
-    console.error("Sign-out error:", error);
+  if (isLoggedIn) {
+    // If the user IS logged in:
+    // If they are on a login or sign-up page, redirect them to the main dashboard.
+    if (currentPagePath.includes(LOGIN_PAGE_PATH.toLowerCase()) || currentPagePath.includes(CADASTRO_PAGE_PATH.toLowerCase())) {
+      console.log("User is logged in on an auth page, redirecting to dashboard.");
+      window.location.href = DASHBOARD_PAGE_PATH; // Redirect to your dashboard page.
+    }
+    // If they are already on the dashboard or another intended page, do nothing here.
+  } else {
+    // If the user IS NOT logged in:
+    // If they are on the dashboard (or any other page that requires login), redirect them to the login page.
+    if (currentPagePath.includes(DASHBOARD_PAGE_PATH.toLowerCase())) {
+      console.log("User is logged out on the dashboard, redirecting to login page.");
+      window.location.href = LOGIN_PAGE_PATH; // Redirect to your login page.
+    }
+    // If they are already on a login/sign-up page (which is where they should be), do nothing here.
   }
 });
