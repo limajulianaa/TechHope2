@@ -89,7 +89,7 @@ button {
     border: none;
     border-radius: 10px;
     cursor: pointer;
-    background-color:rgb(1, 67, 134);
+    background-image: linear-gradient(to left, rgb(1, 67, 134), rgb(0, 128, 255));
     color: white;
     transition: 0.3s;
     display: flex;
@@ -106,8 +106,8 @@ button img {
 
 button:hover {
     transform: scale(1.08);
-    background-color: rgb(1, 67, 134);
-    box-shadow: 0 0 8px #000080;
+    background-image: linear-gradient(to left, rgb(1, 67, 134), rgb(0, 128, 255));
+    box-shadow: 0 0 8px rgb(1, 67, 134);
 }
 
 div {
