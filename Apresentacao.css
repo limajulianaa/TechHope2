@@ -23,7 +23,7 @@
     }
 
       header img {
-        width: 120px;
+        width: 10px;
         height: auto;
     }
 
@@ -35,7 +35,6 @@
     .d2 img {
         width: 100%;
         height: auto;
-        margin-bottom: 5px;
     }
 }
 
@@ -64,7 +63,7 @@ header img {
     border: inset 4px rgb(1, 67, 134);
     text-align: center;
     color: white;
-    background-color: #000080;
+    background-color: rgb(1, 67, 134);
     padding: 15px;
     width: 90%;
     margin: 20px auto;
@@ -90,7 +89,7 @@ button {
     border: none;
     border-radius: 10px;
     cursor: pointer;
-    background-color: #000080;
+    background-color:rgb(1, 67, 134);
     color: white;
     transition: 0.3s;
     display: flex;
@@ -107,7 +106,7 @@ button img {
 
 button:hover {
     transform: scale(1.08);
-    background-color: #000080;
+    background-color: rgb(1, 67, 134);
     box-shadow: 0 0 8px #000080;
 }
 
@@ -115,13 +114,11 @@ div {
     display: flex;
     flex-direction: row;
 }
-/* #FFB90F; amarelo*/
-/*#000080; azul */
 
 .d1 {
     border: inset 5px rgb(1, 67, 134);
     text-align: center;
-    background-color:#000080;
+    background-color:rgb(1, 67, 134);
     padding: 3px;
     margin: 3px;
     border-radius: 12px;
@@ -152,7 +149,7 @@ strong {
 .d2 {
     border: inset 5px rgb(1, 67, 134);
     text-align: center;
-    background-color: #000080;
+    background-color:rgb(1, 67, 134);
     padding: 3px;
     margin: 3px;
     border-radius: 12px;
