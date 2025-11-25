@@ -1,13 +1,15 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Jost:ital,wght@0,100..900;1,100..900&family=Noto+Sans+TC:wght@100..900&family=Noto+Serif+JP:wght@200..900&display=swap');
+
 *{
     margin:0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Noto Sans TC", sans-serif;
 }
 
 body {
-    background-color:#ffffff; 
-    font-family: Arial, Helvetica, sans-serif;
+    background-color:#000080; 
     line-height: 1.6;
 }
 
@@ -17,12 +19,11 @@ body {
     left: 0;
     width: 100%;
     z-index: 1000;
-}
 
-.header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
     padding: 15px 30px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
     background-color: #FFFAFA; 
@@ -41,13 +42,14 @@ body {
     text-transform: uppercase;
     text-align: center;
     padding: 5px 10px;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .nav-bar a:hover {
     color: #FFB90F; 
-    transform: scale(1.1); /
+    transform: scale(1.1); 
 }
+
 
 .icons {
     display: flex;
@@ -73,65 +75,110 @@ body {
 
 .icon-circle:hover {
     transform: scale(1.2);
-    background-color: var(--color-dark-blue); 
+    background-color: #FFFAFA; 
 }
 
 .icon-circle:hover i {
     color:  #000080;
 }
 
+
 .carousel-item img {
     margin-top: 120px;
     width: 100%;
-    height: 540px; /* ajuste a altura como quiser */
-    object-fit: contain; /* mostra a imagem inteira */
-    background-color: #fff; /* evita fundo preto */
-    padding-left: 30px;
+    height: 540px;
+    object-fit: contain;
+    background-color: #fff;
 }
 
-@media (max-width: 768px) {
-    .header {
-        padding: 10px 20px;
-    }
-
-    .logo img {
-        height: 26px;
-    }
-
-    .nav-bar a {
-        font-size: 15px;
-        padding: 5px 6px;
-    }
-
-    .icon-circle {
-        width: 32px;
-        height: 32px;
-    }
-
-    .icon-circle i {
-        font-size: 16px;
-    }
-
-    .carousel-item img {
-        height: 360px;
-        margin-top: 100px;
-    }
+.titulo{
+    font-weight: bold;
+    font-size: 25px;
+    color: #000080; 
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    transition: color 0.9s ease;
+    padding-left: 55px;
+    margin-top: 30px;
 }
 
-@media (max-width: 480px) {
-    .header {
-        flex-direction: column;
-        gap: 10px;
-        padding: 12px;
-    }
+.titulo:hover{
+    color: #FFB90F; 
+}
 
-    .nav-bar a {
-        font-size: 14px;
-    }
+.atividades ul{
+    margin-top: 60px;
+    padding-left: 50px;
+    background-color: #FFB90F;
+    border-radius: 40px;
+}
 
-    .carousel-item img {
-        height: 260px;
-        margin-top: 80px; /* aumenta porque a header ficou maior */ 
-        padding-right: 20px;
-    }
+.atividades li{
+    margin-top: 60px;
+    list-style: none;
+    padding: 10px;
+}
+
+.atividades a{
+    text-decoration: none;
+    color:black;
+    font-size: 28px;
+}
+
+.cap1 .linha1{
+    color:#000080;
+    font-size:30px;
+    text-align: center;
+    list-style-type: none;
+}
+
+.cap1 li{
+    margin-top: 30px;
+    font-size: 35px;
+    color: black;
+    padding-left: 10px;
+    list-style-type: none;
+}
+
+.cap1 p{
+    color:#000080;
+}
+
+.paragrafo-1{
+    margin-bottom: 50px;
+} 
+
+.texto-linha{
+    margin-top:15px;
+}
+
+.paragrafo-1 a{
+  animation: mudarCor 5s infinite;
+}
+
+.botao-link{
+    border: none;
+    border-radius: 20px;
+    height: 70px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    background-color: #000080;
+    width: 12%;
+}
+
+.botao-link p{
+    margin-top: 5px;
+    text-align: center;
+    color: white;
+}
+
+@keyframes mudarCor {
+  0% { color:white; }
+  25% { color:#FFB90F; }
+  50% { color:white; }
+  75% { color:#FFB90F; }
+  100% { color:white; }
 }
