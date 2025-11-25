@@ -1,6 +1,9 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Jost:ital,wght@0,100..900;1,100..900&family=Noto+Sans+TC:wght@100..900&family=Noto+Serif+JP:wght@200..900&display=swap');
 
+html{
+    scroll-behavior: smooth;
+}
 *{
     margin:0;
     padding: 0;
@@ -26,7 +29,7 @@ body {
 
     padding: 15px 30px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-    background-color: #FFFAFA; 
+    background-color: white; 
 }
 
 .logo img {
@@ -93,7 +96,7 @@ body {
 
 .titulo{
     font-weight: bold;
-    font-size: 25px;
+    font-size: 20px;
     color: #000080; 
     text-decoration: none;
     text-transform: uppercase;
@@ -111,7 +114,7 @@ body {
     margin-top: 60px;
     padding-left: 50px;
     background-color: #FFB90F;
-    border-radius: 40px;
+    border-radius: 14px;
 }
 
 .atividades li{
