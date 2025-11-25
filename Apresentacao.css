@@ -4,6 +4,7 @@
         gap: 10px;
         padding: 10px;
         text-align: center;
+        background-color: white;
     }
 
     header img {
@@ -33,25 +34,45 @@
     }
 
     .d2 img {
-        width: 100%;
-        height: auto;
+           width: 100%;
+           max-width: 440px;
+           height: 300px; 
+           object-fit: cover; 
+    }
+
+      ul {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center; 
+    }
+
+    ul li {
+        width: 90%;
+        text-align: center;
     }
 }
 
+
 * {
-    padding: 0;
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
 header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    margin: 0;
+    box-sizing: border-box;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: white;
-    padding: 10px 20px;
+    background: linear-gradient(to bottom,rgb(1, 58, 116) rgb(1, 45, 88), rgb(0, 30, 59));    padding: 10px 20px;
     width: 100%;
-    box-shadow: 0 2px 8px rgb(1, 67, 134);
+    box-shadow: 0 2px 8px rgb(222, 226, 0);
+    background-color: white;
 }
 
 header img {
@@ -72,12 +93,8 @@ header img {
 }
 
 body {
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    min-height: 100vh;
-    color: white;
-    font-family: Arial, sans-serif;
+     padding-top: 80px;
+     color: white;
 }
 
 button {
@@ -174,4 +191,56 @@ strong {
    
 }
 
+ul{
+    font-family: 'Georgia', serif;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 10px;
+}
 
+.l1{
+    border-radius: 10px;
+    margin-left: 3px;
+    border: inset 5px rgb(1, 67, 134);
+    background-color: rgb(1, 58, 116);
+     transition: 0.3s;
+}
+
+.l2{
+    border-radius: 10px;
+    border: inset 5px rgb(1, 67, 134);
+    background-color: rgb(1, 45, 88);
+     transition: 0.3s;
+}
+
+.l3{
+    border-radius: 10px;
+    margin-right: 3px;
+    border: inset 5px rgb(1, 67, 134);
+    background-color: rgb(0, 30, 59);
+     transition: 0.3s;
+}
+
+.l1:hover{
+    box-shadow: 0 0 8px rgb(1, 67, 134);
+    transform: scale(1.01);
+
+}
+
+.l2:hover{
+    box-shadow: 0 0 8px rgb(1, 67, 134);
+    transform: scale(1.01);
+
+}
+
+.l3:hover{
+        box-shadow: 0 0 8px rgb(1, 67, 134);
+        transform: scale(1.01);
+
+}
+
+h5{
+    border-bottom: solid 2px white;
+}
