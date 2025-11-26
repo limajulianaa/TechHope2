@@ -8,7 +8,7 @@ html{
     margin:0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Noto Sans TC", sans-serif;
+    font-family: 'Noto Sans TC1', sans-serif;
 }
 
 body {
@@ -78,7 +78,7 @@ body {
 
 .icon-circle:hover {
     transform: scale(1.2);
-    background-color: #FFFAFA; 
+    background-color: #fff; 
 }
 
 .icon-circle:hover i {
@@ -96,14 +96,14 @@ body {
 
 .titulo{
     font-weight: bold;
-    font-size: 20px;
+    font-size: 30px;
     color: #000080; 
     text-decoration: none;
     text-transform: uppercase;
     text-align: center;
     transition: color 0.9s ease;
     padding-left: 55px;
-    margin-top: 30px;
+    margin-top: 45px;
 }
 
 .titulo:hover{
@@ -115,7 +115,10 @@ body {
     padding-left: 50px;
     background-color: #FFB90F;
     border-radius: 14px;
+    border: inset  2px #000080;
 }
+
+
 
 .atividades li{
     margin-top: 60px;
@@ -131,7 +134,7 @@ body {
 
 .cap1 .linha1{
     color:#000080;
-    font-size:30px;
+    font-size:35px;
     text-align: center;
     list-style-type: none;
 }
@@ -148,12 +151,18 @@ body {
     color:#000080;
 }
 
+.cap1 h3{
+    margin-top: 45px;
+    font-size: 40px;
+}
+
 .paragrafo-1{
     margin-bottom: 50px;
 } 
 
 .texto-linha{
     margin-top:15px;
+    font-size: 30px;
 }
 
 .paragrafo-1 a{
@@ -162,18 +171,18 @@ body {
 
 .botao-link{
     border: none;
-    border-radius: 20px;
-    height: 70px;
+    border-radius: 35px;
+    height: 60px;
     display: block;
     margin-left: auto;
-    margin-right: auto;
-    margin-top: 10px;
+    margin-right:auto;
+    margin-top: 45px;
     background-color: #000080;
-    width: 12%;
+    width: 13%;
 }
 
 .botao-link p{
-    margin-top: 5px;
+    margin-top: 2px;
     text-align: center;
     color: white;
 }
@@ -184,4 +193,19 @@ body {
   50% { color:white; }
   75% { color:#FFB90F; }
   100% { color:white; }
+}
+
+@keyframes aparecerSuave {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+body {
+    animation: aparecerSuave 1.5s ease-out;
 }
