@@ -37,7 +37,7 @@
                 <span class="erro" id="erroSenha"></span> <!-- This is for specific client-side validation, if used -->
             </div>
 
-            <button type="submit" class="mandar">Entrar</button> <!-- Changed text from "Enviar" to "Entrar" (Login) -->
+            <button onclick="irparahome()" type="submit" class="mandar">Entrar</button>
 
             <!-- IMPORTANT: This is the paragraph where Firebase authentication errors will be displayed -->
             <p id="loginErrorMessage" class="erro hidden"></p>
@@ -55,6 +55,6 @@
 
      <!-- IMPORTANT: This links your HTML to the compiled JavaScript logic from index.ts -->
      <!-- Ensure your build process outputs index.js to a place accessible from here -->
-     <script type="module" src="./index.js"></script>
+     <script type="module" src="login.js"></script>
 </body>
 </html>

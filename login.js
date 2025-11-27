@@ -15,6 +15,10 @@ form.addEventListener("submit", function(event) {
     form.reset();
 });*/
 
+function irparahome() {
+    window.location.href = "homepage.html"; 
+}
+
 const form = document.getElementById("form");
 
 form.addEventListener("submit", function(event) {
@@ -60,4 +64,5 @@ form.addEventListener("submit", function(event) {
         mensagemSucesso.textContent = "Formulário enviado com sucesso!";
         form.reset();
     }
+
 });
