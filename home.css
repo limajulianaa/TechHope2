@@ -8,12 +8,13 @@ html{
     margin:0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Noto Sans TC1', sans-serif;
+    font-family: 'Noto Sans TC', sans-serif;
 }
 
 body {
     background-color:#000080; 
     line-height: 1.6;
+    animation: aparecerSuave 1.5s ease-out;
 }
 
 .header {
@@ -85,12 +86,18 @@ body {
     color:  #000080;
 }
 
+.icons {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
 
 .carousel-item img {
     margin-top: 120px;
     width: 100%;
-    height: 540px;
-    object-fit: contain;
+    height: auto;
+    object-fit: cover;
     background-color: #fff;
 }
 
@@ -98,11 +105,10 @@ body {
     font-weight: bold;
     font-size: 30px;
     color: #000080; 
-    text-decoration: none;
-    text-transform: uppercase;
     text-align: center;
+    text-decoration: none;
     transition: color 0.9s ease;
-    padding-left: 55px;
+    margin-left: 55px;
     margin-top: 45px;
 }
 
@@ -114,11 +120,9 @@ body {
     margin-top: 60px;
     padding-left: 50px;
     background-color: #FFB90F;
-    border-radius: 14px;
+    border-radius: 24px;
     border: inset  2px #000080;
 }
-
-
 
 .atividades li{
     margin-top: 60px;
@@ -136,7 +140,6 @@ body {
     color:#000080;
     font-size:35px;
     text-align: center;
-    list-style-type: none;
 }
 
 .cap1 li{
@@ -174,9 +177,7 @@ body {
     border-radius: 35px;
     height: 60px;
     display: block;
-    margin-left: auto;
-    margin-right:auto;
-    margin-top: 45px;
+    margin: 42px auto;
     background-color: #000080;
     width: 13%;
 }
@@ -206,6 +207,199 @@ body {
     }
 }
 
-body {
-    animation: aparecerSuave 1.5s ease-out;
+/* ======== TELA MAIOR ========*/
+@media (max-width: 768px) {
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative; /* permite centralizar o nav */
+        padding: 10px 20px;
+    }
+
+    /* LOGO À ESQUERDA */
+    .logo img {
+        height: 22px;
+    }
+
+    /* NAV CENTRALIZADO COM "CURSOS" */
+    .nav-bar {
+        position: absolute; /* permite centralização real */
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .nav-bar a {
+        font-size: 20px;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: #000080;
+    }
+
+    /* ÍCONES À DIREITA */
+    .icons {
+        display: flex;
+        gap: 10px;
+    }
+
+    .icon-circle {
+        width: 32px;
+        height: 32px;
+    }
+
+    .icon-circle i {
+        font-size: 16px;
+    }
+
+    .titulo {
+        font-size: 24px;
+        margin-right: 32px;
+    }
+
+   .carousel-item img {
+        margin-top: 50px;
+        width: 100%;
+        max-height: 400px;
+        object-fit: cover;
+    }
+
+    .cap1 .linha1 {
+        font-size: 30px;
+        margin-right: 25px;
+    }
+
+    .cap1 .texto-linha{
+        margin-right: 10px;
+    }
+
+    .cap1 .texto-linha{
+        margin-top: 30px;
+    }
+
+
+    .atividades a {
+        font-size: 24px;
+    }
+
+    .botao-link {
+        width: 25%;
+        height: 60px;
+        align-items: center;
+
+    }
+
+    .botao-link p {
+        font-size: 18px;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .nav-bar {
+        display: none;
+    }
+
+    .titulo {
+        font-size: 20px;
+    }
+
+    .atividades a {
+        font-size: 18px;
+    }
+
+    .cap1 li {
+        font-size: 22px;
+    }
+
+    .botao-link {
+        width: 65%;
+    }
+}
+
+/* =============== MENOR TELA ================*/
+@media (max-width: 280px) {
+
+    /* Reduz espaço do topo para o carrossel */
+    .carousel-item img {
+        margin-top: 100px;
+        max-height: 130px;
+    }
+
+    /* Header compacto */
+    .header {
+        padding: 10px 15px;
+    }
+
+    .logo img {
+        height: 22px;
+    }
+
+    /* Esconde navbar em telas muito pequenas */
+    .nav-bar {
+        display: none;
+    }
+
+    /* Ícones menores */
+    .icon-circle {
+        width: 28px;
+        height: 28px;
+    }
+
+    .icon-circle i {
+        font-size: 14px;
+    }
+
+    /* Títulos menores */
+    .titulo {
+        font-size: 20px;
+        padding-left: 0;
+        margin-top: 35px;
+    }
+
+    /* Lista de atividades */
+    .atividades ul {
+        padding-left: 10px;
+        margin-top: 40px;
+        margin-bottom: 30px;
+    }
+
+    .atividades li {
+        margin-top: 35px;
+    }
+
+    .atividades a {
+        font-size: 18px;
+    }
+
+    /* Texto do capítulo */
+    .cap1 .linha1 {
+        font-size: 30px;
+        margin-right: 18px;
+    }
+
+    .cap1 li {
+        font-size: 18px;
+    }
+
+    .cap1 h3 {
+        font-size: 24px;
+    }
+
+    .texto-linha {
+        font-size: 20px;
+    }
+
+    .botao-link {
+        width: 80%;
+        height: 40px;
+        border-radius: 20px;
+        margin-left: 1.1rem;
+  }
+
+    .botao-link p {
+        font-size: 18px;
+        margin-top: 7px;
+}
 }
