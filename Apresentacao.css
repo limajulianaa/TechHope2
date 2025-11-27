@@ -114,8 +114,7 @@ header img {
     width: 90%;
     margin: 20px auto;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(1, 67, 134, 0.7);
-}
+box-shadow: 0 0 8px gray;}
 
 body {
      padding-top: 80px;
@@ -149,12 +148,13 @@ button img {
 button:hover {
     transform: scale(1.08);
     background-color:  #000080;
-    box-shadow: 0 0 8px grey;
+    box-shadow: 0 0 8px gray;
 }
 
 div {
     display: flex;
     flex-direction: row;
+    gap: 5px;
 }
 
 .d1 {
@@ -165,7 +165,7 @@ div {
     margin: 3px;
     border-radius: 12px;
     gap: 20px;
-    box-shadow: 0 0 10px rgba(1, 67, 134, 0.6);
+box-shadow: 0 0 8px gray;
     font-size: 20px;
 }
 
@@ -187,7 +187,7 @@ strong {
     margin: 3px;
     border-radius: 12px;
     gap: 20px;
-    box-shadow: 0 0 10px rgba(1, 67, 134, 0.6);
+box-shadow: 0 0 8px gray;
     font-size: 20px;
 }
 
@@ -232,19 +232,19 @@ ul{
 }
 
 .l1:hover{
-    box-shadow: 0 0 8px rgb(1, 67, 134);
+    box-shadow: 0 0 8px gray;
     transform: scale(1.01);
 
 }
 
 .l2:hover{
-    box-shadow: 0 0 8px rgb(1, 67, 134);
+    box-shadow: 0 0 8px gray;
     transform: scale(1.01);
 
 }
 
 .l3:hover{
-        box-shadow: 0 0 8px rgb(1, 67, 134);
+    box-shadow: 0 0 8px gray;
         transform: scale(1.01);
 
 }
@@ -255,7 +255,7 @@ ul .p1{
 }
 
 .gif{
-         width: 100%; 
-        height: 400px;
-
+        width: 100%; 
+        height: 100%;
+        
     }
