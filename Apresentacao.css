@@ -148,7 +148,7 @@ button img {
 button:hover {
     transform: scale(1.08);
     background-color:  #000080;
-    box-shadow: 0 0 8px gray;
+    box-shadow: 0 0 5px gray;
 }
 
 div {
