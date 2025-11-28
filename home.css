@@ -179,14 +179,17 @@ body {
     display: block;
     margin: 42px auto;
     background-color: #000080;
-    width: 13%;
+    width: 15%;
 }
 
 .botao-link p{
-    margin-top: 2px;
+    margin-top: 8px;
     text-align: center;
     color: white;
+    font-size: 5px;
+    margin-left: 2px;
 }
+
 
 @keyframes mudarCor {
   0% { color:white; }
@@ -204,6 +207,157 @@ body {
     100% {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+
+@media (max-width: 1280px) {
+
+    /* HEADER */
+    .header {
+        padding: 14px 25px;
+    }
+
+    .logo img {
+        height: 28px;
+    }
+
+    .nav-bar a {
+        font-size: 17px;
+        padding: 5px 10px;
+    }
+
+    .icon-circle {
+        width: 36px;
+        height: 36px;
+    }
+
+    .icon-circle i {
+        font-size: 18px;
+    }
+
+    /* TÍTULO */
+    .titulo {
+        font-size: 28px;
+        margin-left: 45px;
+        margin-top: 40px;
+    }
+
+    /* LISTA DE ATIVIDADES */
+    .atividades ul {
+        padding-left: 40px;
+        margin-top: 55px;
+    }
+
+    .atividades li {
+        margin-top: 55px;
+    }
+
+    .atividades a {
+        font-size: 26px;
+    }
+
+    /* CONTEÚDO CAPÍTULO */
+    .cap1 .linha1 {
+        font-size: 33px;
+    }
+
+    .cap1 li {
+        font-size: 32px;
+        margin-top: 28px;
+    }
+
+    .cap1 h3 {
+        font-size: 38px;
+        margin-top: 40px;
+    }
+
+    .texto-linha {
+        font-size: 28px;
+    }
+
+    /* BOTÃO */
+    .botao-link {
+        width: 40%;
+        height: 58px;
+    }
+
+    .botao-link p {
+        font-size: 15px;
+        margin-top: 9px;
+    }
+}
+
+@media (max-width: 1070px) {
+
+    /* HEADER */
+    .header {
+        padding: 12px 20px;
+    }
+
+    .nav-bar a {
+        font-size: 16px;
+        padding: 5px 8px;
+    }
+
+    .icon-circle {
+        width: 32px;
+        height: 32px;
+    }
+
+    .icon-circle i {
+        font-size: 16px;
+    }
+
+    /* TÍTULO */
+    .titulo {
+        font-size: 26px;
+        margin-left: 30px;
+        margin-top: 35px;
+    }
+
+    /* LISTA DE ATIVIDADES */
+    .atividades ul {
+        padding-left: 30px;
+        margin-top: 40px;
+    }
+
+    .atividades li {
+        margin-top: 40px;
+    }
+
+    .atividades a {
+        font-size: 22px;
+    }
+
+    /* CONTEÚDO CAPÍTULO */
+    .cap1 .linha1 {
+        font-size: 30px;
+    }
+
+    .cap1 li {
+        font-size: 28px;
+        margin-top: 25px;
+    }
+
+    .cap1 h3 {
+        font-size: 34px;
+        margin-top: 35px;
+    }
+
+    .texto-linha {
+        font-size: 26px;
+    }
+
+    /* BOTÃO */
+    .botao-link {
+        width: 40%;
+        height: 55px;
+    }
+
+    .botao-link p {
+        font-size: 14px;
+        margin-top: 10px;
     }
 }
 
@@ -231,7 +385,7 @@ body {
     }
 
     .nav-bar a {
-        font-size: 20px;
+        font-size: 10px;
         font-weight: bold;
         text-transform: uppercase;
         color: #000080;
@@ -283,7 +437,7 @@ body {
     }
 
     .botao-link {
-        width: 25%;
+        width: 40%;
         height: 60px;
         align-items: center;
 
@@ -295,7 +449,7 @@ body {
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 587px) {
 
     .nav-bar {
         display: none;
@@ -313,21 +467,71 @@ body {
         font-size: 22px;
     }
 
-    .botao-link {
-        width: 65%;
+      .botao-link {
+        width: 40%;
+        height: 60px;
+        align-items: center;
+    }
+
+    .botao-link p {
+        font-size: 24px;
+    }
+
+    .botao-link a{
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 481px) {
+
+    /* Container geral das atividades */
+    .atividades {
+        padding: 0 15px; /* AFASTA DAS BORDAS */
+    }
+
+    /* Título */
+    .titulo {
+        font-size: 24px;
+        text-align: center;
+        margin-top: 30px;
+        margin-bottom: 25px;
+        padding: 0 10px; /* protege nas laterais */
+    }
+
+    /* Lista */
+    .atividades ul {
+        padding-left: 20px;
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
+
+
+    .botao-link{
+        margin-left: 0.8rem;
+        width: 80%;
+        height:40px;
+    }
+
+    .botao-link p{
+        margin-top: 0.3rem;
+    }
+
+    .botao-link a{
+         font-size: 20px;
     }
 }
 
 /* =============== MENOR TELA ================*/
-@media (max-width: 280px) {
+@media (max-width: 361px) {
 
-    /* Reduz espaço do topo para o carrossel */
+    /* --- CARROSSEL --- */
     .carousel-item img {
         margin-top: 100px;
         max-height: 130px;
+        object-fit: cover;
     }
 
-    /* Header compacto */
+    /* --- HEADER --- */
     .header {
         padding: 10px 15px;
     }
@@ -336,12 +540,12 @@ body {
         height: 22px;
     }
 
-    /* Esconde navbar em telas muito pequenas */
+    /* Navbar some em telas extremamente pequenas */
     .nav-bar {
         display: none;
     }
 
-    /* Ícones menores */
+    /* --- ÍCONES SUPERIORES --- */
     .icon-circle {
         width: 28px;
         height: 28px;
@@ -351,14 +555,19 @@ body {
         font-size: 14px;
     }
 
-    /* Títulos menores */
+    /* --- TÍTULO DA PÁGINA --- */
     .titulo {
-        font-size: 20px;
+        font-size: 15px;
         padding-left: 0;
         margin-top: 35px;
+        text-align: center;
     }
 
-    /* Lista de atividades */
+    /* --- LISTA DE ATIVIDADES --- */
+       .atividades {
+        padding: 0 12px;
+    }
+
     .atividades ul {
         padding-left: 10px;
         margin-top: 40px;
@@ -373,10 +582,10 @@ body {
         font-size: 18px;
     }
 
-    /* Texto do capítulo */
+    /* --- CAPÍTULO 1 --- */
     .cap1 .linha1 {
         font-size: 30px;
-        margin-right: 18px;
+        margin-right: 8px;
     }
 
     .cap1 li {
@@ -387,19 +596,19 @@ body {
         font-size: 24px;
     }
 
-    .texto-linha {
-        font-size: 20px;
+    .cap1 .texto-linha {
+        font-size: 22px;
     }
 
+    /* --- BOTÃO --- */
     .botao-link {
         width: 80%;
         height: 40px;
         border-radius: 20px;
         margin-left: 1.1rem;
-  }
+    }
 
     .botao-link p {
-        font-size: 18px;
-        margin-top: 7px;
-}
+        font-size: 16px;
+    }
 }
