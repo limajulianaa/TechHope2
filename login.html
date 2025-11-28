@@ -3,8 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width-device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Login</title> <!-- Added a more descriptive title -->
     <link rel="stylesheet" href="login.css">
+    <style>
+        /* Add these styles to your login.css or a global CSS file */
+        .erro {
+            color: #dc3545; /* Red color for error messages */
+            font-size: 0.9em;
+            margin-top: 5px;
+            display: block; /* Ensures it takes its own line */
+        }
+        .hidden {
+            display: none; /* Class to hide elements, used by JavaScript */
+        }
+    </style>
 </head>
 <body>
     <div class="container">
@@ -12,27 +24,37 @@
             <h2>LOGIN</h2>
         </section>
 
-        <form class="formu" id="form">
-        <div class="formulario">
-            <label for="email">E-mail:</label>
-            <input type="email" id="email" name="email" placeholder="Digite seu E-mail:">
-            <span class="erro" id="erroEmail"></span>
-        </div>
+        <form class="formu" id="form"> <!-- Your form ID is 'form' -->
+            <div class="formulario">
+                <label for="email">E-mail:</label> <!-- Your input ID is 'email' -->
+                <input type="email" id="email" name="email" placeholder="Digite seu E-mail:" required> <!-- Added 'required' for basic HTML validation -->
+                <span class="erro" id="erroEmail"></span> <!-- This is for specific client-side validation, if used -->
+            </div>
 
-        <div class=formulario>
-            <label for="senha">Senha:</label>
-            <input type="password" id="senha" name="senha" placeholder="Digite sua senha:">
-            <span class="erro" id="erroSenha"></span>
-        </div>
+            <div class="formulario">
+                <label for="senha">Senha:</label> <!-- Your input ID is 'senha' -->
+                <input type="password" id="senha" name="senha" placeholder="Digite sua senha:" required minlength="6"> <!-- Added 'required' and 'minlength' -->
+                <span class="erro" id="erroSenha"></span> <!-- This is for specific client-side validation, if used -->
+            </div>
 
-        <button type="submit">Enviar</button>
+            <button onclick="irparahome()" type="submit" class="mandar">Entrar</button>
 
-         <p id="mensagemSucesso"></p>
+            <!-- IMPORTANT: This is the paragraph where Firebase authentication errors will be displayed -->
+            <p id="loginErrorMessage" class="erro hidden"></p>
 
-    </form>
+            <!-- <p id="mensagemSucesso"></p> --> <!-- This was in your original, but replaced by loginErrorMessage for Firebase errors -->
+
+        </form>
+        <!-- IMPORTANT: This button integrates with the signInWithGoogle function in index.ts -->
+       <!--- <button type="button" id="googleSignInBtn" class="mandar">Entrar com Google</button> -->
+
     </div>
-     <button type="submit" class="tela"><a href= "Apresentacao.html">Tela de Apresentação</a></button>
-     <script src="login.js"></script>
-</body>
+     <!-- Changed type="submit" to type="button" for the back button -->
+     <!-- The JavaScript in index.ts won't interfere with this button now -->
+     <button type="button" class="tela"><a href="Apresentacao.html">Voltar</a></button>
 
+     <!-- IMPORTANT: This links your HTML to the compiled JavaScript logic from index.ts -->
+     <!-- Ensure your build process outputs index.js to a place accessible from here -->
+     <script type="module" src="login.js"></script>
+</body>
 </html>

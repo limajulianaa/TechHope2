@@ -17,7 +17,7 @@ body {
     align-items: center;
     padding: 15px 30px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-    background-color: #FFFAFA; 
+    background-color: #FFF; 
 }
 
 .logo img {
@@ -114,41 +114,114 @@ body {
     background: #FFFAFA; 
     color:#000080
 }
-/*
-.video-box {
-    width: 100%;
-    height: 350px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 30px;
-}*/
-.section-two { 
-    display: flex;
-    justify-content: center;
-    background-color: #000080;
-    
+.video-container {
+    display: flex;               
+    justify-content: center;     
+    align-items: center;         
+    height: 67vh;               
+    margin: 30px;                   
 }
+.video-player {
+    width: 80%;                  
+    max-width: 800px;            
+    height: auto;                
+}
+.section-two {
+    display: flex;
+    justify-content: center;
+    background-color: #000080; 
+    padding: 20px 0; 
+}
+
+
 .materiais {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    text-align: center; 
+    gap: 20px; 
+    width: 100%;
+    max-width: 1000px; 
+}
 
-}
 .materiais h3 {
-    font-size: 20px;
+    font-size: 24px;
     font-weight: 600;
-    color:#FFFAFA
+    color: #FFFAFA; 
+    margin-bottom: 20px; 
 }
-.section-three{
-    background-color: #FFFAFA;
+
+.materiais iframe {
+    max-width: 100%;
+    height: 290px;
+    border: none; 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+    margin-bottom: 20px; 
 }
+
+.section-three {
+    background-color: #f0ad12;
+    padding: 40px 20px;
+}
+
 .exercicios {
-    margin-bottom: 25px;
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
 }
 
 .exercicios h3 {
-    font-size: 20px;
-    font-weight: 600;
-    color:#000080
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #000080;
+}
+
+.questao {
+    margin-bottom: 20px;
+}
+
+.questao p {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.alternativas {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.alternativas label {
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.alternativas input[type="radio"] {
+    margin-right: 10px;
+}
+
+.submit-btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #000080;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #5555f3;
 }

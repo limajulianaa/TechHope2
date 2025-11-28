@@ -1,12 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Jost:ital,wght@0,100..900;1,100..900&family=Noto+Sans+TC:wght@100..900&family=Noto+Serif+JP:wght@200..900&display=swap');
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: "Noto Sans TC", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
 }
 
+
 body{
-    background-image: url(ChatGPT\ Image\ 17\ de\ nov.\ de\ 2025\,\ 10_38_22.png);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -36,17 +41,18 @@ body{
     margin: 14px;
     width: 100%;
     overflow: hidden;
+    border: 5px solid #000080;
 }
 
 .titulo{
-    background: linear-gradient(120deg, #3474b4, #1d499c);
-    padding: 20px;
+    background-color: #000080;
+    padding: 15px;
     text-align: center;
     color: white;
 }
 
 .form{
-    padding: 20px;
+    padding: 10px;
 }
 
 .formulario{
@@ -71,13 +77,13 @@ body{
 
 input:focus{
     outline: none;
-    border-color:#1d499c;
+    border-color:#000080;
 }
 
 button{
-    background: linear-gradient(120deg, #3474b4, #1d499c);
+    background-color:#000080; 
     width: 100%;
-    padding: 6px;
+    padding: 8px;
     color: white;
     border-radius: 14px;
     font-size: 15px;
@@ -87,7 +93,7 @@ button{
 }
 
 button:hover {
-        background-color: #2980b9; /* Cor ao passar o mouse */
+        background-color: #FFB90F; /* Cor ao passar o mouse */
         transform: scale(1.02);
 }
 
@@ -112,5 +118,9 @@ button:hover {
 }
 
 .container {
+    animation: aparecerSuave 0.8s ease-out;
+}
+
+.tela{
     animation: aparecerSuave 0.8s ease-out;
 }
