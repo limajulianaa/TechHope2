@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css">
+    <style>
+        /* Your CSS styles here */
+        .erro { color: #dc3545; font-size: 0.9em; margin-top: 5px; display: block; }
+        .hidden { display: none; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <section class="titulo"><h2>LOGIN</h2></section>
+        <form class="formu" id="form">
+            <div class="formulario">
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" placeholder="Digite seu E-mail:" required>
+                <span class="erro" id="erroEmail"></span>
+            </div>
+            <div class="formulario">
+                <label for="senha">Senha:</label>
+                <input type="password" id="senha" name="senha" placeholder="Digite sua senha:" required minlength="6">
+                <span class="erro" id="erroSenha"></span>
+            </div>
+            <a href="esqueciminhasenha" class="eSenha">Esqueci minha senha</a>
+            <button type="submit" class="mandar">Entrar</button>
+            <p id="loginErrorMessage" class="erro hidden"></p>
+        </form>
+    </div>
+    <button type="button" class="tela"><a href="Apresentacao.html">Voltar</a></button>
+
+    <!--
+        *** START: Firebase SDK Imports ***
+        Place these BEFORE your application's JavaScript.
+        IMPORTANT: Replace '10.9.0' with the latest stable Firebase SDK version.
+   
+        *** END: Firebase SDK Imports ***
+    -->
+
+    <!-- Your compiled application JavaScript file -->
+    <!-- This should be your 'index.js' which contains all the logic for different pages -->
+    <script type="module" src="./index.js"></script>
+</body>
+</html>
