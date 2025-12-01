@@ -1,46 +1,39 @@
-const form = document.getElementById("form");
-const nome = document.getElementById("nome");
-const email = document.getElementById("email");
-const senha = document.getElementById("senha");
-const erro = document.getElementById("cadastroErrorMessage");
+document.addEventListener("DOMContentLoaded", function () {
 
-form.addEventListener("submit", (event) => {
-    event.preventDefault(); // impede o envio automático
+    const form = document.getElementById("form");
+    const nomeInput = document.getElementById("nome");
+    const emailInput = document.getElementById("email");
+    const senhaInput = document.getElementById("senha");
+    const msgErro = document.getElementById("cadastroErrorMessage");
 
-    // limpa mensagem anterior
+    form.addEventListener("submit", function (event) {
+        event.preventDefault();
 
-    erro.textContent = "";
-    erro.classList.add("hidden");
+        let erros = [];
 
-    // validação do nome 
+        if (nomeInput.value.trim().length < 3) {
+            erros.push("O nome deve ter pelo menos 3 caracteres.");
+        }
 
-    if (nome.value.trim().length < 3) {
-        mostrarErro("O nome deve ter pelo menos 3 caracteres.");
-        return;
-    }
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(emailInput.value)) {
+            erros.push("Digite um e-mail válido.");
+        }
 
-    // validação do email
+        if (senhaInput.value.length < 6) {
+            erros.push("A senha deve ter pelo menos 6 caracteres.");
+        }
 
-    const regexEmail = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-    if (!regexEmail.test(email.value)) {
-        mostrarErro("Digite um e-mail válido.");
-        return;
-    }
+        if (erros.length > 0) {
+            msgErro.textContent = erros.join(" ");
+            msgErro.classList.remove("hidden");
 
-    // validação da senha
+            console.log("Erros exibidos:", erros);
+            return;
+        }
 
-    if (senha.value.length < 6) {
-        mostrarErro("A senha deve ter pelo menos 6 caracteres.");
-        return;
-    }
+        msgErro.classList.add("hidden");
+        alert("Cadastro concluído!");
+    });
 
-    // Se passou em todas validações:
-
-    alert("Cadastro enviado com sucesso!");
-    form.submit(); 
 });
-
-function mostrarErro(msg) {
-    erro.textContent = msg;
-    erro.classList.remove("hidden"); 
-}
