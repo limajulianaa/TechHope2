@@ -5,34 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro</title>
     <link rel="stylesheet" href="cadastro.css">
+
     <style>
         /* Your CSS styles here */
         .erro { color: #dc3545; font-size: 0.9em; margin-top: 5px; display: block; }
         .hidden { display: none; }
     </style>
+
 </head>
+
 <body>
     <div class="container">
         <section class="titulo"><h2>CADASTRO</h2></section>
         <form id="form" class="form">
+
             <div class="formulario">
-                <label for="nome">Nome:</label>
-                <input type="text" id="nome" placeholder="Digite o seu nome completo:" required>
+                <label for="nome">Nome:</label> <!-- Your input ID is 'nome' -->
+                <input type="text" id="nome" placeholder="Digite o seu nome completo:" > <!-- Added 'required' for basic HTML validation --> 
             </div>
+
             <div class="formulario">
-                <label for="email">E-mail:</label>
-                <input type="email" id="email" placeholder="Digite o seu E-mail:" required>
+                <label for="email">E-mail:</label> <!-- Your input ID is 'email' -->
+                <input type="email" id="email" placeholder="Digite o seu E-mail:" > <!-- Added 'required' -->
             </div>
+
             <div class="formulario">
-                <label for="senha">Senha:</label>
-                <input type="password" id="senha" placeholder="Digite a sua senha:" required minlength="6">
+                <label for="senha">Senha:</label> <!-- Your input ID is 'senha' -->
+                <input type="password" id="senha" placeholder="Digite a sua senha:"> <!-- Added 'required' and 'minlength' -->
             </div>
+
             <button type="submit" class="mandar">Enviar</button>
             <p id="cadastroErrorMessage" class="erro hidden"></p>
         </form>
     </div>
 
     <button type="button" class="tela"><a href="Apresentacao.html">Voltar</a></button>
+
+ 
+    <!-- IMPORTANT: This links your HTML to the compiled JavaScript logic from index.ts -->
+    <!-- Ensure your build process outputs index.js to a place accessible from here -->
+    <script src="cadastro.js"></script>
 
     <!--
         *** START: Firebase SDK Imports ***

@@ -124,3 +124,11 @@ button:hover {
 .tela{
     animation: aparecerSuave 0.8s ease-out;
 }
+
+.input-erro {
+    border: 2px solid #dc3545; /* vermelho */
+}
+
+.input-ok {
+    border: 2px solid #28a745; /* verde */
+}
