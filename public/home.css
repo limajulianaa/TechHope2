@@ -1,0 +1,614 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Jost:ital,wght@0,100..900;1,100..900&family=Noto+Sans+TC:wght@100..900&family=Noto+Serif+JP:wght@200..900&display=swap');
+
+html{
+    scroll-behavior: smooth;
+}
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+body {
+    background-color:#000080; 
+    line-height: 1.6;
+    animation: aparecerSuave 1.5s ease-out;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 15px 30px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    background-color: white; 
+}
+
+.logo img {
+    height: 30px;
+    width: auto;
+}
+
+.nav-bar a {
+    font-weight: bold;
+    font-size: 18px;
+    color: #000080; 
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 5px 10px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-bar a:hover {
+    color: #FFB90F; 
+    transform: scale(1.1); 
+}
+
+
+.icons {
+    display: flex;
+    gap: 12px;
+}
+
+.icon-circle {
+    width: 38px;
+    height: 38px;
+    background-color: #000080; 
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    cursor: pointer;
+}
+
+.icon-circle i {
+    font-size: 20px;
+    color: #fff;
+}
+
+.icon-circle:hover {
+    transform: scale(1.2);
+    background-color: #fff; 
+}
+
+.icon-circle:hover i {
+    color:  #000080;
+}
+
+.icons {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.carousel-item img {
+    margin-top: 120px;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    background-color: #fff;
+}
+
+.titulo{
+    font-weight: bold;
+    font-size: 30px;
+    color: #000080; 
+    text-align: center;
+    text-decoration: none;
+    transition: color 0.9s ease;
+    margin-left: 55px;
+    margin-top: 45px;
+}
+
+.titulo:hover{
+    color: #FFB90F; 
+}
+
+.atividades ul{
+    margin-top: 60px;
+    padding-left: 50px;
+    background-color: #FFB90F;
+    border-radius: 24px;
+    border: inset  2px #000080;
+}
+
+.atividades li{
+    margin-top: 60px;
+    list-style: none;
+    padding: 10px;
+}
+
+.atividades a{
+    text-decoration: none;
+    color:black;
+    font-size: 28px;
+}
+
+.cap1 .linha1{
+    color:#000080;
+    font-size:35px;
+    text-align: center;
+}
+
+.cap1 li{
+    margin-top: 30px;
+    font-size: 35px;
+    color: black;
+    padding-left: 10px;
+    list-style-type: none;
+}
+
+.cap1 p{
+    color:#000080;
+}
+
+.cap1 h3{
+    margin-top: 45px;
+    font-size: 40px;
+}
+
+.paragrafo-1{
+    margin-bottom: 50px;
+} 
+
+.texto-linha{
+    margin-top:15px;
+    font-size: 30px;
+}
+
+.paragrafo-1 a{
+  animation: mudarCor 5s infinite;
+}
+
+.botao-link{
+    border: none;
+    border-radius: 35px;
+    height: 60px;
+    display: block;
+    margin: 42px auto;
+    background-color: #000080;
+    width: 15%;
+}
+
+.botao-link p{
+    margin-top: 8px;
+    text-align: center;
+    color: white;
+    font-size: 5px;
+    margin-left: 2px;
+}
+
+
+@keyframes mudarCor {
+  0% { color:white; }
+  25% { color:#FFB90F; }
+  50% { color:white; }
+  75% { color:#FFB90F; }
+  100% { color:white; }
+}
+
+@keyframes aparecerSuave {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@media (max-width: 1280px) {
+
+    /* HEADER */
+    .header {
+        padding: 14px 25px;
+    }
+
+    .logo img {
+        height: 28px;
+    }
+
+    .nav-bar a {
+        font-size: 17px;
+        padding: 5px 10px;
+    }
+
+    .icon-circle {
+        width: 36px;
+        height: 36px;
+    }
+
+    .icon-circle i {
+        font-size: 18px;
+    }
+
+    /* TÍTULO */
+    .titulo {
+        font-size: 28px;
+        margin-left: 45px;
+        margin-top: 40px;
+    }
+
+    /* LISTA DE ATIVIDADES */
+    .atividades ul {
+        padding-left: 40px;
+        margin-top: 55px;
+    }
+
+    .atividades li {
+        margin-top: 55px;
+    }
+
+    .atividades a {
+        font-size: 26px;
+    }
+
+    /* CONTEÚDO CAPÍTULO */
+    .cap1 .linha1 {
+        font-size: 33px;
+    }
+
+    .cap1 li {
+        font-size: 32px;
+        margin-top: 28px;
+    }
+
+    .cap1 h3 {
+        font-size: 38px;
+        margin-top: 40px;
+    }
+
+    .texto-linha {
+        font-size: 28px;
+    }
+
+    /* BOTÃO */
+    .botao-link {
+        width: 40%;
+        height: 58px;
+    }
+
+    .botao-link p {
+        font-size: 15px;
+        margin-top: 9px;
+    }
+}
+
+@media (max-width: 1070px) {
+
+    /* HEADER */
+    .header {
+        padding: 12px 20px;
+    }
+
+    .nav-bar a {
+        font-size: 16px;
+        padding: 5px 8px;
+    }
+
+    .icon-circle {
+        width: 32px;
+        height: 32px;
+    }
+
+    .icon-circle i {
+        font-size: 16px;
+    }
+
+    /* TÍTULO */
+    .titulo {
+        font-size: 26px;
+        margin-left: 30px;
+        margin-top: 35px;
+    }
+
+    /* LISTA DE ATIVIDADES */
+    .atividades ul {
+        padding-left: 30px;
+        margin-top: 40px;
+    }
+
+    .atividades li {
+        margin-top: 40px;
+    }
+
+    .atividades a {
+        font-size: 22px;
+    }
+
+    /* CONTEÚDO CAPÍTULO */
+    .cap1 .linha1 {
+        font-size: 30px;
+    }
+
+    .cap1 li {
+        font-size: 28px;
+        margin-top: 25px;
+    }
+
+    .cap1 h3 {
+        font-size: 34px;
+        margin-top: 35px;
+    }
+
+    .texto-linha {
+        font-size: 26px;
+    }
+
+    /* BOTÃO */
+    .botao-link {
+        width: 40%;
+        height: 55px;
+    }
+
+    .botao-link p {
+        font-size: 14px;
+        margin-top: 10px;
+    }
+}
+
+/* ======== TELA MAIOR ========*/
+@media (max-width: 768px) {
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative; /* permite centralizar o nav */
+        padding: 10px 20px;
+    }
+
+    /* LOGO À ESQUERDA */
+    .logo img {
+        height: 22px;
+    }
+
+    /* NAV CENTRALIZADO COM "CURSOS" */
+    .nav-bar {
+        position: absolute; /* permite centralização real */
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .nav-bar a {
+        font-size: 10px;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: #000080;
+    }
+
+    /* ÍCONES À DIREITA */
+    .icons {
+        display: flex;
+        gap: 10px;
+    }
+
+    .icon-circle {
+        width: 32px;
+        height: 32px;
+    }
+
+    .icon-circle i {
+        font-size: 16px;
+    }
+
+    .titulo {
+        font-size: 24px;
+        margin-right: 32px;
+    }
+
+   .carousel-item img {
+        margin-top: 50px;
+        width: 100%;
+        max-height: 400px;
+        object-fit: cover;
+    }
+
+    .cap1 .linha1 {
+        font-size: 30px;
+        margin-right: 25px;
+    }
+
+    .cap1 .texto-linha{
+        margin-right: 10px;
+    }
+
+    .cap1 .texto-linha{
+        margin-top: 30px;
+    }
+
+
+    .atividades a {
+        font-size: 24px;
+    }
+
+    .botao-link {
+        width: 40%;
+        height: 60px;
+        align-items: center;
+
+    }
+
+    .botao-link p {
+        font-size: 18px;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 587px) {
+
+    .nav-bar {
+        display: none;
+    }
+
+    .titulo {
+        font-size: 20px;
+    }
+
+    .atividades a {
+        font-size: 18px;
+    }
+
+    .cap1 li {
+        font-size: 22px;
+    }
+
+      .botao-link {
+        width: 40%;
+        height: 60px;
+        align-items: center;
+    }
+
+    .botao-link p {
+        font-size: 24px;
+    }
+
+    .botao-link a{
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 481px) {
+
+    /* Container geral das atividades */
+    .atividades {
+        padding: 0 15px; /* AFASTA DAS BORDAS */
+    }
+
+    /* Título */
+    .titulo {
+        font-size: 24px;
+        text-align: center;
+        margin-top: 30px;
+        margin-bottom: 25px;
+        padding: 0 10px; /* protege nas laterais */
+    }
+
+    /* Lista */
+    .atividades ul {
+        padding-left: 20px;
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
+
+
+    .botao-link{
+        margin-left: 0.8rem;
+        width: 80%;
+        height:40px;
+    }
+
+    .botao-link p{
+        margin-top: 0.3rem;
+    }
+
+    .botao-link a{
+         font-size: 20px;
+    }
+}
+
+/* =============== MENOR TELA ================*/
+@media (max-width: 361px) {
+
+    /* --- CARROSSEL --- */
+    .carousel-item img {
+        margin-top: 100px;
+        max-height: 130px;
+        object-fit: cover;
+    }
+
+    /* --- HEADER --- */
+    .header {
+        padding: 10px 15px;
+    }
+
+    .logo img {
+        height: 22px;
+    }
+
+    /* Navbar some em telas extremamente pequenas */
+    .nav-bar {
+        display: none;
+    }
+
+    /* --- ÍCONES SUPERIORES --- */
+    .icon-circle {
+        width: 28px;
+        height: 28px;
+    }
+
+    .icon-circle i {
+        font-size: 14px;
+    }
+
+    /* --- TÍTULO DA PÁGINA --- */
+    .titulo {
+        font-size: 15px;
+        padding-left: 0;
+        margin-top: 35px;
+        text-align: center;
+    }
+
+    /* --- LISTA DE ATIVIDADES --- */
+       .atividades {
+        padding: 0 12px;
+    }
+
+    .atividades ul {
+        padding-left: 10px;
+        margin-top: 40px;
+        margin-bottom: 30px;
+    }
+
+    .atividades li {
+        margin-top: 35px;
+    }
+
+    .atividades a {
+        font-size: 18px;
+    }
+
+    /* --- CAPÍTULO 1 --- */
+    .cap1 .linha1 {
+        font-size: 30px;
+        margin-right: 8px;
+    }
+
+    .cap1 li {
+        font-size: 18px;
+    }
+
+    .cap1 h3 {
+        font-size: 24px;
+    }
+
+    .cap1 .texto-linha {
+        font-size: 22px;
+    }
+
+    /* --- BOTÃO --- */
+    .botao-link {
+        width: 80%;
+        height: 40px;
+        border-radius: 20px;
+        margin-left: 1.1rem;
+    }
+
+    .botao-link p {
+        font-size: 16px;
+    }
+}
