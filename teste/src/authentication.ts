@@ -1,4 +1,3 @@
-// // src/authentication.ts
 
 import {
   GoogleAuthProvider,

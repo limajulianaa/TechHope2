@@ -13,7 +13,6 @@
 </head>
 <body>
     <div class="container">
-        <!-- Your existing HTML content for the login page -->
         <section class="titulo"><h2>LOGIN</h2></section>
         <form class="formu" id="form">
             <div class="formulario">
@@ -30,26 +29,19 @@
             <button type="submit" class="mandar">Entrar</button>
             <p id="loginErrorMessage" class="erro hidden"></p>
         </form>
-        <!-- Uncomment this if you want the Google Sign-In button -->
-        <!-- <button type="button" id="googleSignInBtn" class="mandar">Entrar com Google</button> -->
     </div>
     <button type="button" class="tela"><a href="Apresentacao.html">Voltar</a></button>
 
     <!--
         *** START: Firebase SDK Imports ***
         Place these BEFORE your application's JavaScript.
-        Replace '10.x.x' with the latest Firebase SDK version
-        (check your Firebase Console for the most up-to-date version).
-    -->
-    <script type="module" src="https://www.gstatic.com/firebasejs/10.x.x/firebase-app.js"></script>
-    <script type="module" src="https://www.gstatic.com/firebasejs/10.x.x/firebase-auth.js"></script>
-    <script type="module" src="https://www.gstatic.com/firebasejs/10.x.x/firebase-firestore.js"></script>
-    <!-- Add other Firebase products you use here (e.g., storage, functions) -->
-    <!--
+        IMPORTANT: Replace '10.9.0' with the latest stable Firebase SDK version.
+   
         *** END: Firebase SDK Imports ***
     -->
 
-    <!-- Your compiled application JavaScript file, which uses the Firebase SDKs -->
-    <script type="module" src="./login.js"></script>
+    <!-- Your compiled application JavaScript file -->
+    <!-- This should be your 'index.js' which contains all the logic for different pages -->
+    <script type="module" src="./index.js"></script>
 </body>
 </html>

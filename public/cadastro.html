@@ -13,7 +13,6 @@
 </head>
 <body>
     <div class="container">
-        <!-- Your existing HTML content for the cadastro page -->
         <section class="titulo"><h2>CADASTRO</h2></section>
         <form id="form" class="form">
             <div class="formulario">
@@ -30,9 +29,6 @@
             </div>
             <button type="submit" class="mandar">Enviar</button>
             <p id="cadastroErrorMessage" class="erro hidden"></p>
-            <!-- Optional: If you want a Google Sign-In button on the sign-up page -->
-            <!-- <hr style="margin: 20px 0;">
-            <button type="button" id="googleSignInBtn" class="mandar">Entrar com Google</button> -->
         </form>
     </div>
 
@@ -41,19 +37,16 @@
     <!--
         *** START: Firebase SDK Imports ***
         Place these BEFORE your application's JavaScript.
-        Replace '10.x.x' with the latest Firebase SDK version
-        (check your Firebase Console for the most up-to-date version).
+        IMPORTANT: Replace '10.9.0' with the latest stable Firebase SDK version.
     -->
-    <script type="module" src="https://www.gstatic.com/firebasejs/10.x.x/firebase-app.js"></script>
-    <script type="module" src="https://www.gstatic.com/firebasejs/10.x.x/firebase-auth.js"></script>
-    <script type="module" src="https://www.gstatic.com/firebasejs/10.x.x/firebase-firestore.js"></script>
+   
     <!-- Add other Firebase products you use here (e.g., storage, functions) -->
     <!--
         *** END: Firebase SDK Imports ***
     -->
 
-    <!-- Your compiled application JavaScript file, which uses the Firebase SDKs -->
-    <!-- Assuming your `index.ts` compiles to `index.js` and includes all necessary logic -->
+    <!-- Your compiled application JavaScript file -->
+    <!-- This should be your 'index.js' which contains all the logic for different pages -->
     <script type="module" src="./index.js"></script>
 </body>
 </html>
