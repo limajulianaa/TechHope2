@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Jost:ital,wght@0,100..900;1,100..900&family=Noto+Sans+TC:wght@100..900&family=Noto+Serif+JP:wght@200..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Noto Sans TC", sans-serif;
+}
+
+body{
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;  /*coloca tudo um abaixo do outro */ 
+    justify-content: center;
+    align-items: center;
+}
+
+/*body{
+    background-image: url(ChatGPT\ Image\ 17\ de\ nov.\ de\ 2025\,\ 10_38_22.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}*/
+
+.container{
+    background-color: #fff;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 14px;
+    width: 100%;
+    overflow: hidden;
+    border: 5px solid #000080;
+}
+
+.titulo{
+    background-color: #000080;
+    padding: 30px;
+    text-align: center;
+    color: white;
+}
+
+.form{
+    padding: 30px;
+}
+
+.formulario{
+    margin-bottom: 8px;
+    padding-bottom: 30px;
+    display: relative; 
+}
+
+.formulario label{
+    display: inline-block;
+    margin-bottom: 6px;
+    padding: 15px;
+}
+
+.formulario input{
+    display: block;
+    width: 100%;
+    border-radius: 14px;
+    padding: 15px;
+    border: 2px solid rgba(202, 198, 198, 0.479);
+    transition: border-color 0.2s ease;
+}
+
+input:focus{
+    outline: none;
+    border-color:#000080;
+}
+
+button{
+    background-color:#000080; 
+    width: 100%;
+    padding: 10px;
+    color: white;
+    border-radius: 6px;
+    font-size: 15px;
+    border: none;
+    cursor:pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+        background-color: #FFB90F; /* Cor ao passar o mouse */
+        transform: scale(1.02);
+}
+
+.tela{
+    width: 120px;
+}
+
+.tela a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 15px;
+}
+
+@keyframes aparecerSuave {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.container {
+    animation: aparecerSuave 0.8s ease-out;
+}
+
+.tela{
+    animation: aparecerSuave 0.8s ease-out;
+}
+.formu a{
+   border: none;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   color:#18c9ff;
+   margin-bottom: 10px;
+}
